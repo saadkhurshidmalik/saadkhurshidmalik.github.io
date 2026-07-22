@@ -8,6 +8,7 @@
 <!-- //<meta http-equiv="content-type" content="text/html;charset=utf-8" /> -->
 
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -95,48 +96,18 @@
 
 <body>
 
+<div id="header"></div>
 
-    <!-- Your customer chat code -->
-    <div class="fb-customerchat" attribution=setup_tool page_id="195000027773753" theme_color="#303030"
-        logged_in_greeting="Hi! How can I help you grow your business?"
-        logged_out_greeting="Hi! How can I help you grow your business?">
-    </div>
-    <article>
+<script>
+fetch("components/header.html")
+    .then(res => res.text())
+    .then(data => {
+        document.getElementById("header").innerHTML = data;
+    });
+</script>
+     
 
-        <section class="loader">
-            <div class="centered">
-                <img class="banner-logo" src="img/saad-logo-header.svg" alt="Saad Khurshid Mobile Application Logo">
-            </div>
-        </section>
-        <nav id="myNav" class="overlay">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <section class="overlay-content" style="text-align: center;">
-                <div style="display: inline-block; text-align: left; margin-top: -30px;">
-                    <!--<a href="index.html">Home</a><br>-->
-                    <a href="better1.html">Better1</a>
-                    <a href="appravo.html">Appravo</a>
-                    <a href="mission66.html">Mission 66</a>
-                    <a href="AjzalBenaa.html">Ajzal Benaa</a>
-                    <a href="scAgentBlue.html">ScoreCarts Agent Blue</a>
-                    <a href="sneakerMaps.html">Sneaker Maps</a>
-                    <a href="jobso.html">Jobso</a>
-                    <a href="digiid.html">DigiID</a>
-                    <a href="jobsoPPA.html">Jobso ppa</a>
-                    <a href="beMyCourier.html">Be My Courier</a>
-                    <a href="allureDesign.html">Allure Design</a>
-                    <a href="directTap.html">Direct Tap</a>
-                    <a href="warfareChat.html">Warfare Chat</a>
-                    <br>
-                    <br><br>
-                    <!--<a data-toggle="modal" data-target="#myModal">Contact</a><br>-->
-                </div>
-            </section>
-        </nav>
-
-
-
-        <!----End Slider -->
-
+       
         <article>
             <section class="nav-header">
                 <a class="navbar-brand" href="index.html"><img class="nav-logo" src="img/saad-logo-header.svg"
