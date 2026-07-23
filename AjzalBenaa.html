@@ -7,6 +7,11 @@
 
 <head>
 
+    <style>
+        body {
+            visibility: hidden;
+        }
+    </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -96,10 +101,14 @@
 
     <script>
         fetch("components/header.html")
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById("header").innerHTML = data;
-            });
+            .then(r => r.text())
+            .then(html => {
+                document.getElementById("header").innerHTML = html;
+            })
+            .finally(a => {
+                document.body.style.visibility = "visible";
+            })
+            ;
     </script>
 
 
@@ -265,7 +274,7 @@
             </div>
         </div>
     </article>
-    <nav id="myNav" class="overlay">
+    <!-- <nav id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <section class="overlay-content" style="text-align: center;">
             <div style="display: inline-block; text-align: left;">
@@ -277,7 +286,7 @@
                 <a href="warfareChat.html">Warfare Chat</a><br>
             </div>
         </section>
-    </nav>
+    </nav> -->
 
 </body>
 
