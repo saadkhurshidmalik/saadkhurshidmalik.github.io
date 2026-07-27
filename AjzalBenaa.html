@@ -305,7 +305,16 @@
         </a>
         <button class="menu-btn"><i class="fa fa-bars"></i></button>
     </header>
+<!-- Component Placeholder -->
+<div id="header"></div>
 
+<script>
+    fetch("components/header.html")
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("header").innerHTML = html;
+        });
+</script>
     <!-- Dark Curved Top Hero Section -->
     <section class="hero-section">
         <h1 class="hero-title">Ajzal Benaa</h1>
