@@ -1,30 +1,121 @@
-<header>
-   <section class="loader">
-    <div class="centered">
-      <img class="banner-logo" src="img/saad-logo-header.svg">
-    </div>
-  </section>
+<style>
+    /* Fixed navbar with the dark background gradient */
+    .top-navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: radial-gradient(circle at 50% -20%, #1e293b 0%, #0f172a 60%, #090d16 100%);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
 
-  <nav id="myNav" class="overlay">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <section class="overlay-content" style="text-align: center;">
-      <div style="display: inline-block; text-align: left; margin-top: -30px;">
-        <a href="better1.html">Better1</a>
-        <a href="appravo.html">Appravo</a>
-        <a href="mission66.html">Mission 66</a>
-        <a href="AjzalBenaa.html">Ajzal Benaa</a>
-        <a href="scAgentBlue.html">ScoreCarts Agent Blue</a>
-        <a href="sneakerMaps.html">Sneaker Maps</a>
-        <a href="jobso.html">Jobso</a>
-        <a href="digiid.html">DigiID</a>
-        <a href="jobsoPPA.html">Jobso ppa</a>
-        <a href="beMyCourier.html">Be My Courier</a>
-        <a href="allureDesign.html">Allure Design</a>
-        <a href="directTap.html">Direct Tap</a>
-        <a href="warfareChat.html">Warfare Chat</a>
-        
-        <br><br><br>
-      </div>
-    </section>
-  </nav>
+    .brand-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .menu-btn {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        color: #ffffff;
+        padding: 8px 12px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: background 0.3s ease;
+    }
+
+    .menu-btn:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Fullscreen Overlay Menu */
+    .overlay-navigation {
+        height: 0%;
+        width: 100%;
+        position: fixed;
+        z-index: 2000;
+        top: 0;
+        left: 0;
+        background-color: rgba(9, 13, 22, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        overflow-y: hidden;
+        transition: 0.4s ease-in-out;
+    }
+
+    .overlay-navigation-content {
+        position: relative;
+        top: 15%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .overlay-navigation a {
+        padding: 12px;
+        text-decoration: none;
+        font-size: 28px;
+        color: #94a3b8;
+        display: block;
+        transition: 0.3s;
+        font-weight: 400;
+    }
+
+    .overlay-navigation a:hover,
+    .overlay-navigation a:focus {
+        color: #38bdf8;
+    }
+
+    .overlay-navigation .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        font-size: 50px;
+        cursor: pointer;
+    }
+</style>
+
+<!-- Navbar Header -->
+<header class="top-navbar">
+    <a href="index.html" class="brand-logo">
+        <i class="fa fa-code"></i> Saad Khurshid
+    </a>
+    <button class="menu-btn" onclick="openNav()"><i class="fa fa-bars"></i></button>
 </header>
+
+<!-- Overlay Navigation Menu -->
+<div id="myNav" class="overlay-navigation">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-navigation-content">
+        <a href="index.html" onclick="closeNav()">Home</a>
+        <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.08); width: 100px; margin: 20px auto;">
+        <a href="Better1.html" onclick="closeNav()">Better1</a>
+        <a href="Appravo.html" onclick="closeNav()">Appravo</a>
+        <a href="Mission66.html" onclick="closeNav()">Mission 66</a>
+        <a href="AjzalBenaa.html" onclick="closeNav()">Ajzal Benaa</a>
+        <a href="scAgentBlue.html" onclick="closeNav()">ScoreCarts Agent Blue</a>
+        <a href="sneakerMaps.html" onclick="closeNav()">Sneaker Maps</a>
+        <a href="warfareChat.html" onclick="closeNav()">Warfare Chat</a>
+    </div>
+</div>
+
+<script>
+    function openNav() {
+        document.getElementById("myNav").style.height = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("myNav").style.height = "0%";
+    }
+</script>
