@@ -2067,3 +2067,285 @@ height: 13px;
 .covid .item{
     margin-top: 15px;
 }
+
+/* ALLURE DESIGN CUSTOM STYLES */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #e2e8f0; /* Light grayish background */
+    color: #1e293b;
+    overflow-x: hidden;
+}
+
+/* Top Header Navigation */
+.top-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.menu-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Hero Section with Curved Dark Background */
+.hero-section {
+    background: radial-gradient(circle at 50% -20%, #1e293b 0%, #0f172a 60%, #090d16 100%);
+    padding: 100px 20px 140px;
+    text-align: center;
+    border-bottom-left-radius: 40% 80px;
+    border-bottom-right-radius: 40% 80px;
+    position: relative;
+}
+
+.hero-title {
+    font-size: 56px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    color: #94a3b8;
+    margin-bottom: 35px;
+    font-weight: 400;
+}
+
+/* Action Buttons with Glowing Borders */
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+}
+
+.btn-play {
+    background: rgba(16, 185, 129, 0.12);
+    color: #ffffff !important;
+    border: 1.5px solid #10b981;
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+}
+
+.btn-apple {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.btn-gitlab {
+    background: rgba(249, 115, 22, 0.12);
+    color: #ffffff !important;
+    border: 1.5px solid #ea580c;
+    box-shadow: 0 0 15px rgba(249, 115, 22, 0.3);
+}
+
+/* Floating Overlapping Glass Card (Updated to 70% Width) */
+.main-container {
+    width: 70%;
+    margin: -100px auto 60px;
+    padding: 0;
+    position: relative;
+    z-index: 5;
+}
+
+.floating-glass-card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(30px) saturate(190%);
+    -webkit-backdrop-filter: blur(30px) saturate(190%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.features-list {
+    flex: 1;
+}
+
+.card-heading {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 25px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    color: #1e293b;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.feature-icon {
+    width: 42px;
+    height: 42px;
+    background: rgba(15, 23, 42, 0.08);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0f172a;
+    font-size: 18px;
+}
+
+/* Tech Stack Cloud Visual */
+.tech-cloud-container {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 120px;
+    padding: 30px 25px;
+    text-align: center;
+    max-width: 320px;
+    backdrop-filter: blur(10px);
+}
+
+.tech-cloud-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 15px;
+}
+
+.tech-pills-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.glow-pill {
+    background: #22d3ee;
+    color: #0f172a;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 6px 16px;
+    border-radius: 20px;
+    box-shadow: 0 0 12px rgba(34, 211, 238, 0.6);
+}
+
+/* App Showcase Section */
+.showcase-section {
+    text-align: center;
+    padding: 40px 20px 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.showcase-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 35px;
+}
+
+.mockup-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+    justify-items: center;
+}
+
+.phone-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.phone-frame {
+    width: 100%;
+    max-width: 230px;
+    background: #0f172a;
+    border-radius: 32px;
+    padding: 8px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border: 3px solid #334155;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.phone-frame:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
+}
+
+.phone-frame img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    display: block;
+}
+
+.caption {
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #475569;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 992px) {
+    .main-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        width: 95%;
+    }
+    .floating-glass-card {
+        flex-direction: column;
+        padding: 25px;
+    }
+    .hero-title { font-size: 38px; }
+    .tech-cloud-container { max-width: 100%; }
+}
