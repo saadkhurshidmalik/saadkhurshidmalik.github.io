@@ -1,75 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
-
-<!-- //<meta http-equiv="content-type" content="text/html;charset=utf-8" /> -->
-
 <head>
-
     <style>
         body {
             visibility: hidden;
         }
+
+        /* Custom Project Enhancements */
+        .project-details-container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            color: #ffffff;
+            text-align: left;
+        }
+
+        .badge-link {
+            display: inline-block;
+            margin: 6px 10px 6px 0;
+            padding: 8px 16px;
+            background-color: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            color: #ffffff !important;
+            text-decoration: none !important;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .badge-link:hover {
+            background-color: #ffffff;
+            color: #1a1a1a !important;
+        }
+
+        .tech-pill {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 6px;
+            margin-bottom: 6px;
+        }
+
+        .feature-list {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        .feature-list li {
+            margin-bottom: 8px;
+        }
     </style>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Saad Khurshid - Android/iOS Developer</title>
+    <title>Ajzal Benaa - Saad Khurshid Portfolio</title>
     <meta name="description"
-        content="Saad Khurshid's portfolio, A Professional Mobile Application Developer from Islamabad, Pakistan with a passion to develop Android applications having challenging features & design concepts. I have built quality, intuitive & appealing mobile application in my 5+ years of industry experience.">
-    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-
-    <!-- SEO -->
+        content="Ajzal Benaa - A bilingual cross-platform E-Commerce application developed by Saad Khurshid using Flutter. Supports English & Arabic localization.">
     <meta name="keywords"
-        content="Fitness Tracking App, Health App, Professional Mobile Application Developer, Android Application, Freelancer,Portfolio, Mobile Applications, Apps, App Prototype, Intuitive App Design">
+        content="Ajzal Benaa, Flutter E-Commerce App, Mobile Application Developer, Android, iOS, Bilingual App, Saad Khurshid">
     <meta name="author" content="Saad Khurshid">
-    <meta name="copyright" content="© Copyright 2020 - Saad Khurshid" />
+    <meta name="copyright" content="© Copyright 2026 - Saad Khurshid" />
     <meta name="HandheldFriendly" content="True">
     <link rel="canonical" href="index.html">
-    <!-- Robots -->
     <meta name="robots" content="index, follow">
     <meta name="location" content="Islamabad, Pakistan">
     <link rel="icon" type="image/png" href="img/sd_icon.png" />
 
-    <!-- Facebook meta -->
-    <meta property="og:title" content="Saad Khurshid - Mobile Application Developer" />
-    <meta property="og:image" content="img/fitness_banner.png" />
-    <meta property="og:url" content="fitnessapp.html" />
-    <meta property="og:site-name" content="Saad Khurshid - A Professional Mobile Application Developer" />
-    <meta name="description"
-        content="Saad Khurshid's portfolio, A Professional Mobile Application Developer from Islamabad, Pakistan with a passion to develop Android applications having challenging features & design concepts. I have built quality, intuitive & appealing mobile application in my 5+ years of industry experience." />
+    <!-- Open Graph & Social Meta -->
+    <meta property="og:title" content="Ajzal Benaa - E-Commerce App Case Study" />
+    <meta property="og:image" content="img/ajzalBenaa/1.jpeg" />
+    <meta property="og:url" content="AjzalBenaa.html" />
+    <meta property="og:site-name" content="Saad Khurshid - Mobile Application Developer" />
 
-    <!-- Twitter meta -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Saad Khurshid - A Professional Mobile Application Developer">
-    <meta name="twitter:description"
-        content="Saad Khurshid's portfolio, A Professional Mobile Application Developer from Islamabad, Pakistan with a passion to develop Android applications having challenging features & design concepts. I have built quality, intuitive & appealing mobile application in my 5+ years of industry experience.">
-    <meta name="twitter:image:src" content="img/fitness_banner.png">
-
-    <!-- GOOGLE + Share -->
-    <meta itemprop="name" content="Saad Khurshid - A Professional Mobile Application Developer">
-    <meta itemprop="description"
-        content="Saad Khurshid's portfolio, A Professional Mobile Application Developer from Islamabad, Pakistan with a passion to develop Android applications having challenging features & design concepts. I have built quality, intuitive & appealing mobile application in my 5+ years of industry experience.">
-    <meta itemprop="image" content="img/fitness_banner.png">
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71090498-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-71090498-2');
-    </script>
-
+    <!-- External Libraries -->
     <link rel="stylesheet" href="includes/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="includes/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="includes/jquery/3.2.1/jquery.min.js"></script>
     <link href="css/animate.css" rel="stylesheet" />
     <script src="includes/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="css/style.css" rel="stylesheet" />
+
     <script type="text/javascript">
         function openNav() {
             document.getElementById("myNav").style.height = "100%";
@@ -88,11 +104,9 @@
                 $('.nav-header').show();
                 $('.nav-header').addClass('animated fadeIn');
                 $('.prevapp').addClass('animated fadeIn');
-
             });
         }); 
     </script>
-
 </head>
 
 <body>
@@ -107,134 +121,133 @@
             })
             .finally(a => {
                 document.body.style.visibility = "visible";
-            })
-            ;
+            });
     </script>
 
-
-
     <article>
+        <!-- Header Navigation Bar -->
         <section class="nav-header">
-            <a class="navbar-brand" href="index.html"><img class="nav-logo" src="img/saad-logo-header.svg"
-                    alt="Saad Khurshid Mobile Application Logo"></a>
+            <a class="navbar-brand" href="index.html">
+                <img class="nav-logo" src="img/saad-logo-header.svg" alt="Saad Khurshid Mobile Application Logo">
+            </a>
             <img class="navbar-menu" src="img/menu.svg" style="cursor:pointer" onclick="openNav()"
-                alt="Saad Khurshid Mobile Application Portfolio Tab">
+                alt="Portfolio Navigation Menu">
         </section>
 
+        <!-- Main Content -->
         <section class="prevapp">
             <div id="Apprev" class="carousel slide covid" data-ride="carousel">
                 <h1 class="app-intro">Ajzal Benaa</h1>
-                <a style="color:white; font-size: 15px;"
-                    href="https://play.google.com/store/apps/details?id=com.app.finiexsoft" target="_blank">Android:
-                    https://play.google.com/store/apps/details?id=com.app.finiexsoft</a>
-                <br>
-                <a style="color:white; font-size: 15px;" href="https://apps.apple.com/pk/app/ajzal-benaa/id1633191125"
-                    target="_blank">iOS: https://apps.apple.com/pk/app/ajzal-benaa/id1633191125</a>
+                <p style="color: #ccc; font-size: 16px; margin-top: 5px;">E-Commerce Mobile Application</p>
 
+                <!-- Action Links -->
+                <div style="margin-top: 15px; margin-bottom: 25px;">
+                    <a class="badge-link" href="https://play.google.com/store/apps/details?id=com.app.finiexsoft" target="_blank">
+                        <i class="fa fa-android"></i> Google Play
+                    </a>
+                    <a class="badge-link" href="https://apps.apple.com/pk/app/ajzal-benaa/id1633191125" target="_blank">
+                        <i class="fa fa-apple"></i> App Store
+                    </a>
+                    <a class="badge-link" href="https://gitlab.com/saad044/ajzal-benaa" target="_blank">
+                        <i class="fa fa-gitlab"></i> GitLab Code
+                    </a>
+                </div>
 
+                <!-- Screenshots Carousel -->
                 <div class="prevcar carousel-inner" role="listbox">
                     <div class="item active">
                         <div>
                             <div>
-                                <img src="img/ajzalBenaa/1.jpeg" class="prev-img">
+                                <img src="img/ajzalBenaa/1.jpeg" class="prev-img" alt="Sign in Screen">
                                 <div style="display: inline-block; text-align: left;">
                                     <p class="app-intro-desc">Sign in Screen</p>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div>
                             <div>
-                                <img src="img/ajzalBenaa/2.jpeg" class="prev-img">
+                                <img src="img/ajzalBenaa/2.jpeg" class="prev-img" alt="Home Screen">
                                 <div style="display: inline-block; text-align: left;">
                                     <p class="app-intro-desc">Home Screen</p>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div>
                             <div>
-                                <img src="img/ajzalBenaa/3.jpeg" class="prev-img">
+                                <img src="img/ajzalBenaa/3.jpeg" class="prev-img" alt="Product Detail Screen">
                                 <div style="display: inline-block; text-align: left;">
                                     <p class="app-intro-desc">Product Detail Screen</p>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div>
                             <div>
-                                <img src="img/ajzalBenaa/4.jpeg" class="prev-img">
+                                <img src="img/ajzalBenaa/4.jpeg" class="prev-img" alt="Cart Screen">
                                 <div style="display: inline-block; text-align: left;">
                                     <p class="app-intro-desc">Cart Screen</p>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div>
                             <div>
-                                <img src="img/ajzalBenaa/5.jpeg" class="prev-img">
+                                <img src="img/ajzalBenaa/5.jpeg" class="prev-img" alt="Checkout Step 1">
                                 <div style="display: inline-block; text-align: left;">
-                                    <p class="app-intro-desc">Checkout - 1</p>
+                                    <p class="app-intro-desc">Checkout - Step 1</p>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div>
                             <div>
-                                <img src="img/ajzalBenaa/6.jpeg" class="prev-img">
+                                <img src="img/ajzalBenaa/6.jpeg" class="prev-img" alt="Checkout Step 2">
                                 <div style="display: inline-block; text-align: left;">
-                                    <p class="app-intro-desc">Checkout - 2</p>
+                                    <p class="app-intro-desc">Checkout - Step 2</p>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div>
                             <div>
-                                <img src="img/ajzalBenaa/7.jpeg" class="prev-img">
+                                <img src="img/ajzalBenaa/7.jpeg" class="prev-img" alt="Checkout Step 3">
                                 <div style="display: inline-block; text-align: left;">
-                                    <p class="app-intro-desc">Checkout - 3</p>
+                                    <p class="app-intro-desc">Checkout - Step 3</p>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div>
                             <div>
-                                <img src="img/ajzalBenaa/8.jpeg" class="prev-img">
+                                <img src="img/ajzalBenaa/8.jpeg" class="prev-img" alt="Categories Screen">
                                 <div style="display: inline-block; text-align: left;">
                                     <p class="app-intro-desc">Categories Screen</p>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div>
                             <div>
-                                <img src="img/ajzalBenaa/9.jpeg" class="prev-img">
+                                <img src="img/ajzalBenaa/9.jpeg" class="prev-img" alt="Profile Screen">
                                 <div style="display: inline-block; text-align: left;">
                                     <p class="app-intro-desc">Profile Screen</p>
                                 </div>
-
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <!----End Slider-->
+
+                <!-- Carousel Controls -->
                 <a class="left carousel-control" href="#Apprev" data-slide="prev">
                     <span class="glyphicon glyphicon-chevron-left"></span>
                     <span class="sr-only">Previous</span>
@@ -243,52 +256,65 @@
                     <span class="glyphicon glyphicon-chevron-right"></span>
                     <span class="sr-only">Next</span>
                 </a>
-        </section>
-        <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog">
+            </div>
 
-                <!-- Modal content-->
-                <div class="modal-content">
-
-                    <div class="modal-body">
-
-
-
-                        <div class="personal-contact">
-                            <a class="mobile" href="tel:+923129191949"><img class="contact-icon-1"
-                                    src="img/ic_call_white.svg"
-                                    alt="Saad Khurshid Mobile Application Facebook Icon">+923129191949</a>
-                            <div style='margin:20px;'>
-
-                                <a class="email" href="mailto:saadkhurshid838@gmail.com?Subject=Hello%20again"
-                                    target="_top"><img class="contact-icon-1" src="img/ic_email_white_12px.svg"
-                                        alt="Saad Khurshid Mobile Application Facebook Icon">saadkhurshid838@gmail.com</a>
-
-                            </div>
-
-                        </div>
-
+            <!-- Detailed Project Information -->
+            <div class="project-details-container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>About the Project</h3>
+                        <p style="font-size: 15px; line-height: 1.6; color: #e0e0e0;">
+                            <strong>Ajzal Benaa</strong> is a full-featured cross-platform E-Commerce mobile application built for seamless retail browsing and shopping. Built using <strong>Flutter</strong>, the app provides native performance on both Android and iOS devices, featuring full localization in <strong>English</strong> and <strong>Arabic</strong> (including complete Right-to-Left / RTL layout support).
+                        </p>
+                        
+                        <h4 style="margin-top: 20px;">Key Features</h4>
+                        <ul class="feature-list" style="font-size: 14px; color: #d0d0d0;">
+                            <li><strong>Bilingual Support:</strong> Full dynamic localization switching between English and Arabic with complete RTL screen adapters.</li>
+                            <li><strong>Product Catalog & Filtering:</strong> Smooth multi-level category navigation and real-time product search.</li>
+                            <li><strong>Interactive Shopping Cart:</strong> Real-time price calculation, item adjustments, and persistent cart management.</li>
+                            <li><strong>Multi-Step Checkout:</strong> Streamlined order placement workflow including shipping destination selection and payment processing.</li>
+                            <li><strong>User Profiles & Order Tracking:</strong> Seamless account setup, order history tracking, and profile management.</li>
+                        </ul>
                     </div>
 
+                    <div class="col-md-4">
+                        <h3>Tech Stack</h3>
+                        <div style="margin-top: 15px;">
+                            <span class="tech-pill">Flutter</span>
+                            <span class="tech-pill">Dart</span>
+                            <span class="tech-pill">REST APIs</span>
+                            <span class="tech-pill">i18n / Dynamic Localization</span>
+                            <span class="tech-pill">RTL Support</span>
+                            <span class="tech-pill">Android Studio</span>
+                            <span class="tech-pill">Xcode</span>
+                            <span class="tech-pill">GitLab</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="personal-contact">
+                            <a class="mobile" href="tel:+923129191949">
+                                <img class="contact-icon-1" src="img/ic_call_white.svg" alt="Call Phone">+923129191949
+                            </a>
+                            <div style="margin:20px;">
+                                <a class="email" href="mailto:saadkhurshid838@gmail.com?Subject=Hello%20again" target="_top">
+                                    <img class="contact-icon-1" src="img/ic_email_white_12px.svg" alt="Email Address">saadkhurshid838@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </article>
-    <!-- <nav id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <section class="overlay-content" style="text-align: center;">
-            <div style="display: inline-block; text-align: left;">
-                <a href="index.html">Home</a><br>
-                <a href="mission66.html">Mission 66</a>
-                <a href="beMyCourier.html">Be My Courier</a>
-                <a href="allureDesign.html">Allure Design</a>
-                <a href="directTap.html">Direct Tap</a>
-                <a href="warfareChat.html">Warfare Chat</a><br>
-            </div>
-        </section>
-    </nav> -->
 
 </body>
-
 
 </html>
