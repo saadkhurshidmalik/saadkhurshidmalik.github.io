@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Saad Khurshids - Mobile Application Developer</title>
+    <title>Saad Khurshid — Mobile Developer Portfolio</title>
 
     <!-- Font Awesome & Modern Typography -->
     <link rel="stylesheet" href="includes/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <script src="includes/jquery/3.2.1/jquery.min.js"></script>
 
@@ -16,7 +16,7 @@
     <link href="css/style.css" rel="stylesheet" />
 </head>
 
-<body>
+<body class="dashboard-theme">
 
     <!-- Header Navigation Component -->
     <div id="header"></div>
@@ -32,228 +32,242 @@
             });
     </script>
 
-    <!-- Compact Hero Header Section -->
-    <section class="hero-section hero-compact">
-        <div class="hero-header-bar">
-            <!-- Small, polished profile avatar -->
-            <div class="hero-avatar-small">
-                <img src="saad_image.png" alt="Saad Khurshid">
-            </div>
-
-            <div class="hero-intro-text">
-                <div class="hero-title-row">
-                    <h1 class="hero-name">Saad Khurshid</h1>
-                    <span class="status-badge"><i class="fa fa-circle"></i> Available for hire</span>
-                </div>
-                <p class="hero-tagline">Mobile Application Developer specializing in iOS, Android, and Cross-Platform Architectures</p>
-            </div>
-        </div>
-
-        <!-- Social / Action Links -->
-        <div class="button-row compact-buttons">
-            <a href="mailto:saadkhurshid838@gmail.com" class="btn-pill btn-play">
-                <i class="fa fa-envelope"></i> Contact Me
-            </a>
-            <a href="https://www.linkedin.com/in/saad-khurshid-6529ab131/" class="btn-pill btn-gitlab" target="_blank">
-                <i class="fa fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://www.facebook.com/sunnymalik236/" class="btn-pill btn-gitlab" target="_blank">
-                <i class="fa fa-facebook"></i> Facebook
-            </a>
-        </div>
-    </section>
-
-    <!-- Overlapping Glass Card Body (70% max-width) -->
-    <div class="main-container">
-        <div class="floating-glass-card">
-            
-            <!-- Key Metrics Bar -->
-            <div class="stats-row">
-                <div class="stat-item">
-                    <span class="stat-number">12+</span>
-                    <span class="stat-label">Apps Built</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <span class="stat-number">Android & iOS</span>
-                    <span class="stat-label">Target Platforms</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <span class="stat-number">Kotlin / Swift / Flutter</span>
-                    <span class="stat-label">Primary Stack</span>
-                </div>
-            </div>
-
-            <hr class="card-divider" />
-
-            <!-- Core Technical Competencies -->
-            <div class="features-list">
-                <h2 class="card-heading">Technical Expertise</h2>
-
-                <div class="feature-item">
-                    <div class="feature-icon"><i class="fa fa-mobile"></i></div>
-                    <span>Native Mobile Development (Android Kotlin/Java & iOS Swift)</span>
-                </div>
-
-                <div class="feature-item">
-                    <div class="feature-icon"><i class="fa fa-code-fork"></i></div>
-                    <span>Cross-Platform App Architecture (Flutter, MVVM, MVC)</span>
-                </div>
-
-                <div class="feature-item">
-                    <div class="feature-icon"><i class="fa fa-plug"></i></div>
-                    <span>REST APIs, Firebase, Google Maps SDK, and Push Notification Systems</span>
-                </div>
-            </div>
-
-            <!-- Tech Stack Cloud -->
-            <div class="tech-cloud-container">
-                <div class="tech-cloud-title">Technologies & Skills</div>
-                <div class="tech-pills-wrapper">
-                    <span class="glow-pill">Android</span>
-                    <span class="glow-pill">iOS</span>
-                    <span class="glow-pill">Kotlin</span>
-                    <span class="glow-pill">Swift</span>
-                    <span class="glow-pill">Java</span>
-                    <span class="glow-pill">Flutter</span>
-                    <span class="glow-pill">Material Design</span>
-                    <span class="glow-pill">Google Maps API</span>
-                    <span class="glow-pill">REST APIs</span>
-                    <span class="glow-pill">Firebase</span>
-                    <span class="glow-pill">Push Notifications</span>
-                    <span class="glow-pill">MVVM / MVC</span>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Featured Projects Showcase Section -->
-    <section class="showcase-section">
-        <h3 class="showcase-title">Selected Projects</h3>
+    <main class="dashboard-wrapper">
         
-        <div class="portfolio-grid">
+        <!-- Profile Banner Card -->
+        <header class="profile-banner-card">
+            <div class="banner-left">
+                <div class="avatar-ring">
+                    <img src="saad_image.png" alt="Saad Khurshid" class="avatar-img">
+                </div>
+                <div class="profile-meta">
+                    <div class="title-with-status">
+                        <h1 class="dev-name">Saad Khurshid</h1>
+                        <span class="pulse-badge"><span class="pulse-dot"></span> Available</span>
+                    </div>
+                    <p class="dev-role">Mobile Application Developer & Architect</p>
+                </div>
+            </div>
 
-            <a href="better1.html" class="project-card">
-                <div class="project-card-header">
-                    <i class="fa fa-shopping-cart project-icon"></i>
-                    <i class="fa fa-arrow-right project-arrow"></i>
-                </div>
-                <h4 class="project-title">Better1</h4>
-                <p class="project-desc">E-commerce mobile app engineered for frictionless product exploration and checkout.</p>
-                <div class="project-tags">
-                    <span>Android</span>
-                    <span>REST API</span>
-                </div>
-            </a>
+            <div class="banner-right">
+                <a href="mailto:saadkhurshid838@gmail.com" class="action-btn primary-btn">
+                    <i class="fa fa-paper-plane"></i> Hire Me
+                </a>
+                <a href="https://www.linkedin.com/in/saad-khurshid-6529ab131/" target="_blank" class="action-btn icon-btn" title="LinkedIn">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+                <a href="https://www.facebook.com/sunnymalik236/" target="_blank" class="action-btn icon-btn" title="Facebook">
+                    <i class="fa fa-facebook"></i>
+                </a>
+            </div>
+        </header>
 
-            <a href="scAgentBlue.html" class="project-card">
-                <div class="project-card-header">
-                    <i class="fa fa-map-marker project-icon"></i>
-                    <i class="fa fa-arrow-right project-arrow"></i>
+        <!-- Bento Grid Layout -->
+        <section class="bento-grid">
+            
+            <!-- Bento Box 1: Core Summary -->
+            <div class="bento-card summary-card">
+                <div class="card-tag">OVERVIEW</div>
+                <h2>Building Native & Cross-Platform Mobile Apps</h2>
+                <p>Specialized in crafting fluid, performant, and scalable applications across Android (Kotlin/Java), iOS (Swift), and Flutter ecosystems with clean architecture.</p>
+                
+                <div class="mini-stats">
+                    <div class="m-stat">
+                        <span class="m-val">12+</span>
+                        <span class="m-lbl">Published Apps</span>
+                    </div>
+                    <div class="m-stat">
+                        <span class="m-val">2</span>
+                        <span class="m-lbl">Platforms (iOS & Android)</span>
+                    </div>
+                    <div class="m-stat">
+                        <span class="m-val">100%</span>
+                        <span class="m-lbl">Client Satisfaction</span>
+                    </div>
                 </div>
-                <h4 class="project-title">ScoreCarts Agent Blue</h4>
-                <p class="project-desc">Field agent data collection and location tracking mobile app.</p>
-                <div class="project-tags">
-                    <span>Google Maps</span>
-                    <span>Location</span>
-                </div>
-            </a>
+            </div>
 
-            <a href="sneakerMaps.html" class="project-card">
-                <div class="project-card-header">
-                    <i class="fa fa-street-view project-icon"></i>
-                    <i class="fa fa-arrow-right project-arrow"></i>
-                </div>
-                <h4 class="project-title">Sneaker Maps</h4>
-                <p class="project-desc">Location-aware directory and store locator for local sneaker boutiques.</p>
-                <div class="project-tags">
-                    <span>Geolocation</span>
-                    <span>Maps</span>
-                </div>
-            </a>
+            <!-- Bento Box 2: Core Capabilities -->
+            <div class="bento-card capabilities-card">
+                <div class="card-tag">SPECIALIZATIONS</div>
+                <ul class="capability-list">
+                    <li>
+                        <div class="cap-icon"><i class="fa fa-mobile"></i></div>
+                        <div>
+                            <strong>Native Development</strong>
+                            <span>Kotlin, Swift, Java & Material UI</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cap-icon"><i class="fa fa-cubes"></i></div>
+                        <div>
+                            <strong>Cross-Platform</strong>
+                            <span>Flutter & MVVM / MVC Patterns</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cap-icon"><i class="fa fa-bolt"></i></div>
+                        <div>
+                            <strong>API & Services Integration</strong>
+                            <span>REST APIs, Firebase, Google Maps & Push Notifications</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
 
-            <a href="appravo.html" class="project-card">
-                <div class="project-card-header">
-                    <i class="fa fa-check-square-o project-icon"></i>
-                    <i class="fa fa-arrow-right project-arrow"></i>
+            <!-- Bento Box 3: Tech Cloud -->
+            <div class="bento-card tech-card">
+                <div class="card-tag">TECH STACK</div>
+                <div class="tech-pills">
+                    <span class="tech-pill"><i class="fa fa-android"></i> Android</span>
+                    <span class="tech-pill"><i class="fa fa-apple"></i> iOS</span>
+                    <span class="tech-pill">Kotlin</span>
+                    <span class="tech-pill">Swift</span>
+                    <span class="tech-pill">Java</span>
+                    <span class="tech-pill">Flutter</span>
+                    <span class="tech-pill">Firebase</span>
+                    <span class="tech-pill">REST APIs</span>
+                    <span class="tech-pill">Google Maps SDK</span>
+                    <span class="tech-pill">MVVM</span>
+                    <span class="tech-pill">Push Notifications</span>
                 </div>
-                <h4 class="project-title">Appravo</h4>
-                <p class="project-desc">Workflow and task approval management portal built for rapid operational sign-offs.</p>
-                <div class="project-tags">
-                    <span>Mobile App</span>
-                    <span>Firebase</span>
-                </div>
-            </a>
+            </div>
 
-            <a href="mission66.html" class="project-card">
-                <div class="project-card-header">
-                    <i class="fa fa-flag project-icon"></i>
-                    <i class="fa fa-arrow-right project-arrow"></i>
-                </div>
-                <h4 class="project-title">Mission 66</h4>
-                <p class="project-desc">Interactive activity tracking application with customized user routines.</p>
-                <div class="project-tags">
-                    <span>Android</span>
-                    <span>Custom UI</span>
-                </div>
-            </a>
+        </section>
 
-            <a href="beMyCourier.html" class="project-card">
-                <div class="project-card-header">
-                    <i class="fa fa-truck project-icon"></i>
-                    <i class="fa fa-arrow-right project-arrow"></i>
+        <!-- Portfolio Showcase -->
+        <section class="portfolio-section">
+            <div class="section-header">
+                <div>
+                    <span class="card-tag">PORTFOLIO</span>
+                    <h2 class="section-heading">Featured Mobile Projects</h2>
                 </div>
-                <h4 class="project-title">Be My Courier</h4>
-                <p class="project-desc">Peer-to-peer parcel logistics and live courier assignment service.</p>
-                <div class="project-tags">
-                    <span>Maps API</span>
-                    <span>Real-time</span>
-                </div>
-            </a>
+                <span class="project-count">12 Applications</span>
+            </div>
 
-            <a href="AjzalBenaa.html" class="project-card">
-                <div class="project-card-header">
-                    <i class="fa fa-building project-icon"></i>
-                    <i class="fa fa-arrow-right project-arrow"></i>
-                </div>
-                <h4 class="project-title">Ajzal Benaa</h4>
-                <p class="project-desc">Construction management & supply tracking application for field managers.</p>
-                <div class="project-tags">
-                    <span>Enterprise</span>
-                    <span>REST API</span>
-                </div>
-            </a>
+            <div class="projects-dashboard-grid">
 
-            <a href="jobso.html" class="project-card">
-                <div class="project-card-header">
-                    <i class="fa fa-briefcase project-icon"></i>
-                    <i class="fa fa-arrow-right project-arrow"></i>
-                </div>
-                <h4 class="project-title">Jobso</h4>
-                <p class="project-desc">Direct candidate profile matching and job opportunity portal.</p>
-                <div class="project-tags">
-                    <span>Job Matching</span>
-                    <span>Profiles</span>
-                </div>
-            </a>
+                <a href="better1.html" class="app-card">
+                    <div class="app-card-top">
+                        <div class="app-icon-wrapper"><i class="fa fa-shopping-cart"></i></div>
+                        <span class="app-badge">E-Commerce</span>
+                    </div>
+                    <h3>Better1</h3>
+                    <p>Mobile shopping platform featuring fast product discovery, catalog filters, and secure checkout.</p>
+                    <div class="app-footer">
+                        <span class="tech-sub">Android • REST API</span>
+                        <i class="fa fa-arrow-up-right"></i>
+                    </div>
+                </a>
 
-            <a href="warfareChat.html" class="project-card">
-                <div class="project-card-header">
-                    <i class="fa fa-comments project-icon"></i>
-                    <i class="fa fa-arrow-right project-arrow"></i>
-                </div>
-                <h4 class="project-title">Warfare Chat</h4>
-                <p class="project-desc">Real-time messaging platform powered by live chat channels and instant notifications.</p>
-                <div class="project-tags">
-                    <span>Chat Engine</span>
-                    <span>Firebase</span>
-                </div>
-            </a>
+                <a href="scAgentBlue.html" class="app-card">
+                    <div class="app-card-top">
+                        <div class="app-icon-wrapper"><i class="fa fa-map-marker"></i></div>
+                        <span class="app-badge">Location Services</span>
+                    </div>
+                    <h3>ScoreCarts Agent Blue</h3>
+                    <p>Field agent survey and market intelligence gathering tool powered by real-time geolocation.</p>
+                    <div class="app-footer">
+                        <span class="tech-sub">Google Maps • Tracking</span>
+                        <i class="fa fa-arrow-up-right"></i>
+                    </div>
+                </a>
 
-        </div>
-    </section>
+                <a href="sneakerMaps.html" class="app-card">
+                    <div class="app-card-top">
+                        <div class="app-icon-wrapper"><i class="fa fa-street-view"></i></div>
+                        <span class="app-badge">Directory</span>
+                    </div>
+                    <h3>Sneaker Maps</h3>
+                    <p>Interactive location-based boutique directory and inventory finder for sneaker enthusiasts.</p>
+                    <div class="app-footer">
+                        <span class="tech-sub">Geolocation • Maps API</span>
+                        <i class="fa fa-arrow-up-right"></i>
+                    </div>
+                </a>
+
+                <a href="appravo.html" class="app-card">
+                    <div class="app-card-top">
+                        <div class="app-icon-wrapper"><i class="fa fa-check-square-o"></i></div>
+                        <span class="app-badge">Productivity</span>
+                    </div>
+                    <h3>Appravo</h3>
+                    <p>Streamlined task approval workflow system designed for business management and team operations.</p>
+                    <div class="app-footer">
+                        <span class="tech-sub">Mobile App • Firebase</span>
+                        <i class="fa fa-arrow-up-right"></i>
+                    </div>
+                </a>
+
+                <a href="mission66.html" class="app-card">
+                    <div class="app-card-top">
+                        <div class="app-icon-wrapper"><i class="fa fa-flag"></i></div>
+                        <span class="app-badge">Tracking</span>
+                    </div>
+                    <h3>Mission 66</h3>
+                    <p>Activity tracker enabling users to create custom goal routines and monitor progress over time.</p>
+                    <div class="app-footer">
+                        <span class="tech-sub">Android • Custom UI</span>
+                        <i class="fa fa-arrow-up-right"></i>
+                    </div>
+                </a>
+
+                <a href="beMyCourier.html" class="app-card">
+                    <div class="app-card-top">
+                        <div class="app-icon-wrapper"><i class="fa fa-truck"></i></div>
+                        <span class="app-badge">Logistics</span>
+                    </div>
+                    <h3>Be My Courier</h3>
+                    <p>Peer-to-peer parcel logistics app connecting senders with couriers in real time.</p>
+                    <div class="app-footer">
+                        <span class="tech-sub">Real-Time • Maps API</span>
+                        <i class="fa fa-arrow-up-right"></i>
+                    </div>
+                </a>
+
+                <a href="AjzalBenaa.html" class="app-card">
+                    <div class="app-card-top">
+                        <div class="app-icon-wrapper"><i class="fa fa-building"></i></div>
+                        <span class="app-badge">Enterprise</span>
+                    </div>
+                    <h3>Ajzal Benaa</h3>
+                    <p>Construction management solution for monitoring site progress, inventory, and materials.</p>
+                    <div class="app-footer">
+                        <span class="tech-sub">REST API • Enterprise</span>
+                        <i class="fa fa-arrow-up-right"></i>
+                    </div>
+                </a>
+
+                <a href="jobso.html" class="app-card">
+                    <div class="app-card-top">
+                        <div class="app-icon-wrapper"><i class="fa fa-briefcase"></i></div>
+                        <span class="app-badge">Recruitment</span>
+                    </div>
+                    <h3>Jobso</h3>
+                    <p>Job matching network built to connect candidate skill profiles directly with employers.</p>
+                    <div class="app-footer">
+                        <span class="tech-sub">Profiles • Matching</span>
+                        <i class="fa fa-arrow-up-right"></i>
+                    </div>
+                </a>
+
+                <a href="warfareChat.html" class="app-card">
+                    <div class="app-card-top">
+                        <div class="app-icon-wrapper"><i class="fa fa-comments"></i></div>
+                        <span class="app-badge">Communication</span>
+                    </div>
+                    <h3>Warfare Chat</h3>
+                    <p>Real-time messaging application with encrypted messaging channels and push alerts.</p>
+                    <div class="app-footer">
+                        <span class="tech-sub">Firebase • Real-Time</span>
+                        <i class="fa fa-arrow-up-right"></i>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
 
 </body>
 
