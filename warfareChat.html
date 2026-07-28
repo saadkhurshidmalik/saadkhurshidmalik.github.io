@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <title>Saad Khurshid - Mobile Application Developer</title>
+  <title>Warfare Chat - Saad Khurshid</title>
   
   <!-- SEO Meta Tags -->
   <meta name="description"
-    content="Saad Khurshid's portfolio — Professional Mobile Application Developer with a passion for building quality, intuitive, and appealing mobile applications.">
+    content="Warfare Chat portfolio showcase — Built by Saad Khurshid, Mobile Application Developer.">
   <meta name="keywords"
-    content="Event Booking App, Movie Booking App, Professional Mobile Application Developer, Android Application, Freelancer, Portfolio, Mobile Applications, Apps, App Prototype, Intuitive App Design">
+    content="Warfare Chat, Android App, Mobile Application Developer, Saad Khurshid, Portfolio">
   <meta name="author" content="Saad Khurshid">
   <meta name="copyright" content="© Copyright 2026 - Saad Khurshid">
   <meta name="robots" content="index, follow">
@@ -21,17 +21,10 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Saad Khurshid - Professional Mobile Application Developer">
-  <meta property="og:description" content="Portfolio of Saad Khurshid — Mobile Application Developer specializing in intuitive UI and complex app features.">
-  <meta property="og:image" content="img/event_banner.png">
+  <meta property="og:title" content="Warfare Chat - Mobile Application Showcase">
+  <meta property="og:description" content="Warfare Chat app details and feature showcase by Saad Khurshid.">
+  <meta property="og:image" content="img/warfare chat/1.png">
   <meta property="og:url" content="https://saadkhurshid.com/warfareChat.html">
-  <meta property="og:site_name" content="Saad Khurshid Portfolio">
-
-  <!-- Twitter Meta -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Saad Khurshid - Professional Mobile Application Developer">
-  <meta name="twitter:description" content="Portfolio of Saad Khurshid — Mobile Application Developer specializing in intuitive UI and complex app features.">
-  <meta name="twitter:image" content="img/event_banner.png">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71090498-2"></script>
@@ -49,7 +42,6 @@
   <link rel="stylesheet" href="css/style.css">
 
   <style>
-    /* Prevent flash of unstyled content while header loads */
     body {
       visibility: hidden;
     }
@@ -106,18 +98,39 @@
       <img class="navbar-menu" src="img/menu.svg" style="cursor:pointer" onclick="openNav()" alt="Open Navigation Menu">
     </section>
 
-    <!-- App Showcase Carousel -->
-    <section class="prevapp">
-      <div id="Apprev" class="carousel slide" data-ride="carousel">
-        <h1 class="app-intro">Warfare Chat</h1>
-        
-        <a style="color:#FFF; font-size: 15px; padding-bottom: 40px; display: inline-block;"
-           href="https://play.google.com/store/apps/details?id=com.app.websterz.warfarechat" 
-           target="_blank" 
-           rel="noopener noreferrer">
-          Android: https://play.google.com/store/apps/details?id=com.app.websterz.warfarechat
-        </a>
+    <!-- Hero Header Block (Allure Design Style) -->
+    <section class="project-hero text-center" style="padding: 60px 15px 40px; background: #111; color: #fff;">
+      <h1 class="app-intro" style="font-size: 36px; font-weight: 700; margin-bottom: 15px;">Warfare Chat</h1>
+      <p class="hero-subtitle" style="font-size: 18px; color: #aaa; max-width: 600px; margin: 0 auto 25px;">
+        Real-time mobile messaging application designed for fast, secure, and seamless communication.
+      </p>
+      
+      <a class="btn btn-primary outline" 
+         href="https://play.google.com/store/apps/details?id=com.app.websterz.warfarechat" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         style="padding: 10px 24px; border-radius: 25px; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px;">
+        <i class="fa fa-android" aria-hidden="true" style="margin-right: 8px;"></i> View on Google Play
+      </a>
+    </section>
 
+    <!-- Floating / Central Detail Card (Allure Design Style) -->
+    <section class="container" style="margin-top: -20px; position: relative; z-index: 10;">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 30px; margin-bottom: 50px;">
+            <h3 style="color: #fff; font-size: 20px; margin-top: 0; margin-bottom: 15px;">Project Overview</h3>
+            <p style="color: #ccc; line-height: 1.6;">
+              Warfare Chat offers an intuitive chat ecosystem with instant push notifications, high-availability messaging pipelines, and clean mobile screen transitions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carousel Showcase Section -->
+    <section class="prevapp" style="padding-bottom: 60px;">
+      <div id="Apprev" class="carousel slide" data-ride="carousel">
         <div class="prevcar carousel-inner" role="listbox">
           <div class="item active">
             <img src="img/warfare chat/1.png" class="prev-img" alt="Warfare Chat Screenshot 1">
@@ -142,7 +155,7 @@
           </div>
         </div>
 
-        <!-- Carousel Controls -->
+        <!-- Controls -->
         <a class="left carousel-control" href="#Apprev" role="button" data-slide="prev">
           <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
