@@ -1,60 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
-
 <head>
-
-   <style>
-        body {
-            visibility: hidden;
-        }
-    </style>
-
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
   <title>Saad Khurshid - Mobile Application Developer</title>
+  
+  <!-- SEO Meta Tags -->
   <meta name="description"
-    content="Saad Khurshid's portfolio, A Professional Mobile Application Developer from Islamabad, Pakistan with a passion to develop Android applications having challenging features & design concepts. I have built quality, intuitive & appealing mobile application in my 5+ years of industry experience.">
-  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-
-  <!-- SEO -->
+    content="Saad Khurshid's portfolio — Professional Mobile Application Developer with a passion for building quality, intuitive, and appealing mobile applications.">
   <meta name="keywords"
-    content="Event Booking App, Movie Booking App, Professional Mobile Application Developer, Android Application, Freelancer,Portfolio, Mobile Applications, Apps, App Prototype, Intuitive App Design">
+    content="Event Booking App, Movie Booking App, Professional Mobile Application Developer, Android Application, Freelancer, Portfolio, Mobile Applications, Apps, App Prototype, Intuitive App Design">
   <meta name="author" content="Saad Khurshid">
-  <meta name="copyright" content="© Copyright 2020 - Saad Khurshid" />
-  <meta name="HandheldFriendly" content="True">
-  <link rel="canonical" href="index.html">
-  <!-- Robots -->
+  <meta name="copyright" content="© Copyright 2026 - Saad Khurshid">
   <meta name="robots" content="index, follow">
-  <meta name="location" content="Islamabad, Pakistan">
-  <link rel="icon" type="image/png" href="img/sd_icon.png" />
+  <link rel="canonical" href="warfareChat.html">
+  <link rel="icon" type="image/png" href="img/sd_icon.png">
 
-  <!-- Facebook meta -->
-  <meta property="og:title" content="Saad Khurshid - A Professional Mobile Application Developer" />
-  <meta property="og:image" content="img/event_banner.png" />
-  <meta property="og:url" content="eventsapp.html" />
-  <meta property="og:site-name" content="Saad Khurshid - A Professional Mobile Application Developer" />
-  <meta name="description"
-    content="Saad Khurshid's portfolio, A Professional Mobile Application Developer from Islamabad, Pakistan with a passion to develop Android applications having challenging features & design concepts. I have built quality, intuitive & appealing mobile application in my 5+ years of industry experience." />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Saad Khurshid - Professional Mobile Application Developer">
+  <meta property="og:description" content="Portfolio of Saad Khurshid — Mobile Application Developer specializing in intuitive UI and complex app features.">
+  <meta property="og:image" content="img/event_banner.png">
+  <meta property="og:url" content="https://saadkhurshid.com/warfareChat.html">
+  <meta property="og:site_name" content="Saad Khurshid Portfolio">
 
-  <!-- Twitter meta -->
+  <!-- Twitter Meta -->
   <meta name="twitter:card" content="summary_large_image">
-
-  <meta name="twitter:title" content="Saad Khurshid - A Professional Mobile Application Developer">
-  <meta name="twitter:description"
-    content="Saad Khurshid's portfolio, A Professional Mobile Application Developer from Islamabad, Pakistan with a passion to develop Android applications having challenging features & design concepts. I have built quality, intuitive & appealing mobile application in my 5+ years of industry experience.">
-  <meta name="twitter:image:src" content="img/event_banner.png">
-
-  <!-- GOOGLE + Share -->
-  <meta itemprop="name" content="Saad Khurshid - A Professional Mobile Application Developer">
-  <meta itemprop="description"
-    content="Saad Khurshid's portfolio, A Professional Mobile Application Developer from Islamabad, Pakistan with a passion to develop Android applications having challenging features & design concepts. I have built quality, intuitive & appealing mobile application in my 5+ years of industry experience.">
-  <meta itemprop="image" content="img/event_banner.png">
-
+  <meta name="twitter:title" content="Saad Khurshid - Professional Mobile Application Developer">
+  <meta name="twitter:description" content="Portfolio of Saad Khurshid — Mobile Application Developer specializing in intuitive UI and complex app features.">
+  <meta name="twitter:image" content="img/event_banner.png">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71090498-2"></script>
@@ -62,17 +39,27 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'UA-71090498-2');
   </script>
 
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="includes/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="includes/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Prevent flash of unstyled content while header loads */
+    body {
+      visibility: hidden;
+    }
+  </style>
+
+  <!-- JavaScript Dependencies -->
   <script src="includes/jquery/3.2.1/jquery.min.js"></script>
-  <link href="css/animate.css" rel="stylesheet" />
   <script src="includes/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link href="css/style.css" rel="stylesheet" />
-  <script type="text/javascript">
+  
+  <script>
     function openNav() {
       document.getElementById("myNav").style.height = "100%";
     }
@@ -82,210 +69,119 @@
     }
 
     $(window).on('load', function () {
-      $('.nav-header').hide();
-      $('.prevapp').hide();
+      $('.nav-header, .prevapp').hide();
 
       $('.loader').fadeOut(1000, function () {
-        $('.prevapp').show();
-        $('.nav-header').show();
-        $('.nav-header').addClass('animated fadeIn');
-        $('.prevapp').addClass('animated fadeIn');
-
+        $('.prevapp, .nav-header')
+          .show()
+          .addClass('animated fadeIn');
       });
     }); 
   </script>
-
 </head>
 
 <body>
 
-   <div id="header"></div>
+  <!-- Dynamic Header Container -->
+  <div id="header"></div>
 
-    <script>
-        fetch("components/header.html")
-            .then(r => r.text())
-            .then(html => {
-                document.getElementById("header").innerHTML = html;
-            })
-            .finally(a => {
-                document.body.style.visibility = "visible";
-            })
-            ;
-    </script>
+  <script>
+    fetch("components/header.html")
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("header").innerHTML = html;
+      })
+      .catch(err => console.error("Error loading header:", err))
+      .finally(() => {
+        document.body.style.visibility = "visible";
+      });
+  </script>
 
-
-
-  <!----End Slider -->
-
-  <article>
+  <main>
+    <!-- Navigation Header -->
     <section class="nav-header">
-      <a class="navbar-brand" href="index.html"><img class="nav-logo" src="img/saad-logo-header.svg"
-          alt="Saad Khurshid Mobile Application Logo"></a>
-      <img class="navbar-menu" src="img/menu.svg" style="cursor:pointer" onclick="openNav()"
-        alt="Saad Khurshid Mobile Application Portfolio Tab">
+      <a class="navbar-brand" href="index.html">
+        <img class="nav-logo" src="img/saad-logo-header.svg" alt="Saad Khurshid Logo">
+      </a>
+      <img class="navbar-menu" src="img/menu.svg" style="cursor:pointer" onclick="openNav()" alt="Open Navigation Menu">
     </section>
 
+    <!-- App Showcase Carousel -->
     <section class="prevapp">
       <div id="Apprev" class="carousel slide" data-ride="carousel">
         <h1 class="app-intro">Warfare Chat</h1>
-        <a style="color:white; font-size: 15px; padding-bottom: 40px; "
-          href="https://play.google.com/store/apps/details?id=com.app.websterz.warfarechat" target="_blank">Android:
-          https://play.google.com/store/apps/details?id=com.app.websterz.warfarechat</a>
-        <br><br>
+        
+        <a style="color:#FFF; font-size: 15px; padding-bottom: 40px; display: inline-block;"
+           href="https://play.google.com/store/apps/details?id=com.app.websterz.warfarechat" 
+           target="_blank" 
+           rel="noopener noreferrer">
+          Android: https://play.google.com/store/apps/details?id=com.app.websterz.warfarechat
+        </a>
+
         <div class="prevcar carousel-inner" role="listbox">
           <div class="item active">
-            <div>
-              <div>
-                <img src="img/warfare chat/1.png" class="prev-img">
-                <div style="display: inline-block; text-align: left;">
-                  <p class="app-intro-desc"></p>
-                </div>
-
-              </div>
-            </div>
+            <img src="img/warfare chat/1.png" class="prev-img" alt="Warfare Chat Screenshot 1">
           </div>
           <div class="item">
-            <div>
-              <div>
-                <img src="img/warfare chat/2.png" class="prev-img">
-                <div style="display: inline-block; text-align: left;">
-                  <p class="app-intro-desc"></p>
-                </div>
-
-              </div>
-            </div>
+            <img src="img/warfare chat/2.png" class="prev-img" alt="Warfare Chat Screenshot 2">
           </div>
           <div class="item">
-            <div>
-              <div>
-                <img src="img/warfare chat/3.png" class="prev-img">
-                <div style="display: inline-block; text-align: left;">
-                  <p class="app-intro-desc"></p>
-                </div>
-
-              </div>
-            </div>
+            <img src="img/warfare chat/3.png" class="prev-img" alt="Warfare Chat Screenshot 3">
           </div>
           <div class="item">
-            <div>
-              <div>
-                <img src="img/warfare chat/4.png" class="prev-img">
-                <div style="display: inline-block; text-align: left;">
-                  <p class="app-intro-desc"></p>
-                </div>
-
-              </div>
-            </div>
+            <img src="img/warfare chat/4.png" class="prev-img" alt="Warfare Chat Screenshot 4">
           </div>
           <div class="item">
-            <div>
-              <div>
-                <img src="img/warfare chat/5.png" class="prev-img">
-                <div style="display: inline-block; text-align: left;">
-                  <p class="app-intro-desc"></p>
-                </div>
-
-              </div>
-            </div>
+            <img src="img/warfare chat/5.png" class="prev-img" alt="Warfare Chat Screenshot 5">
           </div>
           <div class="item">
-            <div>
-              <div>
-                <img src="img/warfare chat/6.png" class="prev-img">
-                <div style="display: inline-block; text-align: left;">
-                  <p class="app-intro-desc"></p>
-                </div>
-
-              </div>
-            </div>
+            <img src="img/warfare chat/6.png" class="prev-img" alt="Warfare Chat Screenshot 6">
           </div>
           <div class="item">
-            <div>
-              <div>
-                <img src="img/warfare chat/7.png" class="prev-img">
-                <div style="display: inline-block; text-align: left;">
-                  <p class="app-intro-desc"></p>
-                </div>
-
-              </div>
-            </div>
+            <img src="img/warfare chat/7.png" class="prev-img" alt="Warfare Chat Screenshot 7">
           </div>
-          <!-- <div class="item">
-    <div>
-        <div>
-            <img src="img/events/event_artist_detail.png" class="prev-img">
-            <div style="display: inline-block; text-align: left;">
-            <p class="app-intro-desc">Artist page containing artist details along with their upcoming events</p></div>
+        </div>
 
-      </div>
-    </div>  
-</div> 
-<div class="item">
-  <div>
-      <div>
-          <img src="img/events/event_location.png" class="prev-img">
-          <div style="display: inline-block; text-align: left;">
-          <p class="app-intro-desc">Map UI with Navigation links and upcoming events at the location</p></div>
-
-    </div>
-  </div>  
-</div>  
-<div class="item">
-    <div>
-        <div>
-            <img src="img/events/event_booking.png" class="prev-img">
-            <div style="display: inline-block; text-align: left;">
-            <p class="app-intro-desc">Detailed view displaying showtime, user info and booking link</p></div>
-  
-      </div>
-    </div>  
-  </div>   -->
-
-        </div><!----End Slider-->
-        <a class="left carousel-control" href="#Apprev" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left"></span>
+        <!-- Carousel Controls -->
+        <a class="left carousel-control" href="#Apprev" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
-        <a class="right carousel-control" href="#Apprev" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right"></span>
+        <a class="right carousel-control" href="#Apprev" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
+      </div>
     </section>
-    <div class="modal fade" id="myModal" role="dialog">
+
+    <!-- Contact Modal -->
+    <div class="modal fade" id="myModal" role="dialog" aria-labelledby="contactModalTitle" aria-hidden="true">
       <div class="modal-dialog">
-
-        <!-- Modal content-->
         <div class="modal-content">
-
           <div class="modal-body">
-
-
-
             <div class="personal-contact">
-              <a class="mobile" href="tel:+923129191949"><img class="contact-icon-1" src="img/ic_call_white.svg"
-                  alt="Saad Khurshid Mobile Application Facebook Icon">+923129191949</a>
-              <div style='margin:20px;'>
-
-                <a class="email" href="mailto:saadkhurshid838@gmail.com?Subject=Hello%20again" target="_top"><img
-                    class="contact-icon-1" src="img/ic_email_white_12px.svg"
-                    alt="Saad Khurshid Mobile Application Facebook Icon">saadkhurshid838@gmail.com</a>
-
+              <a class="mobile" href="tel:+923129191949">
+                <img class="contact-icon-1" src="img/ic_call_white.svg" alt="Phone Icon">
+                +92 312 9191949
+              </a>
+              <div style="margin: 20px 0;">
+                <a class="email" href="mailto:saadkhurshid838@gmail.com?Subject=Hello%20again">
+                  <img class="contact-icon-1" src="img/ic_email_white_12px.svg" alt="Email Icon">
+                  saadkhurshid838@gmail.com
+                </a>
               </div>
-              <div class="modal-icon-bar">
-
-
-              </div>
+              <div class="modal-icon-bar"></div>
             </div>
-
           </div>
-
         </div>
       </div>
     </div>
-  </article>
+  </main>
+
+  <!-- Overlay Navigation -->
   <nav id="myNav" class="overlay">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <section class="overlay-content" style="text-align: center;">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" aria-label="Close Navigation">&times;</a>
+    <div class="overlay-content" style="text-align: center;">
       <div style="display: inline-block; text-align: left;">
         <a href="index.html">Home</a><br>
         <a href="dealsapp.html">Free Deals and Offers App</a>
@@ -293,9 +189,9 @@
         <a href="beMyCourier.html">Be My Courier</a>
         <a href="allureDesign.html">Allure Design</a>
         <a href="directTap.html">Direct Tap</a>
-        <a href="warfareChat.html">Warfare Chat</a><br>
+        <a href="warfareChat.html">Warfare Chat</a>
       </div>
-    </section>
+    </div>
   </nav>
 
 </body>
