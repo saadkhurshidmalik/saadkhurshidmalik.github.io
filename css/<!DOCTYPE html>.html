@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Ajzal Benaa - E-Commerce Showcase | Saad Khurshid</title>
+    <meta name="description"
+        content="Ajzal Benaa - A bilingual cross-platform E-Commerce application developed by Saad Khurshid using Flutter. Supports dynamic English & Arabic experiences.">
+    <link rel="icon" type="image/png" href="img/sd_icon.png" />
+
+    <!-- External Libraries -->
+    <link rel="stylesheet" href="includes/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="includes/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Modern Tech Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="includes/jquery/3.2.1/jquery.min.js"></script>
+    <link href="css/animate.css" rel="stylesheet" />
+    <script src="includes/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+        /* Exact Background Gradient Matching Image Mockup */
+        html, body {
+            background: radial-gradient(circle at 50% 20%, #1e293b 0%, #0f172a 70%, #080d1a 100%) !important;
+            background-attachment: fixed !important;
+            visibility: hidden;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+            color: #ffffff !important;
+            min-height: 100vh;
+        }
+
+        .prevapp {
+            background: transparent !important;
+        }
+
+        /* Fluid Main Container */
+        .glass-view-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Glossy Hero Header Card */
+        .project-hero-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%) !important;
+            border: 1px solid rgba(255, 255, 255, 0.15) !important;
+            border-top: 1px solid rgba(255, 255, 255, 0.3) !important;
+            border-radius: 28px !important;
+            padding: 50px 30px !important;
+            text-align: center !important;
+            -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
+            backdrop-filter: blur(25px) saturate(180%) !important;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+            margin-bottom: 35px !important;
+        }
+
+        .project-title-cyan {
+            font-size: 54px !important;
+            font-weight: 700 !important;
+            letter-spacing: -1px !important;
+            background: linear-gradient(180deg, #ffffff 0%, #64748b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px !important;
+        }
+
+        .project-tagline {
+            font-size: 19px !important;
+            color: #94a3b8 !important;
+            max-width: 650px !important;
+            margin: 0 auto 35px !important;
+            line-height: 1.6 !important;
+            font-weight: 300 !important;
+        }
+
+        /* Buttons matching the image glow pill style */
+        .refined-btn-group {
+            display: flex !important;
+            gap: 16px !important;
+            justify-content: center !important;
+            flex-wrap: wrap !important;
+        }
+
+        .refined-cta {
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 10px !important;
+            padding: 12px 26px !important;
+            border-radius: 50px !important;
+            font-weight: 600 !important;
+            font-size: 14px !important;
+            text-decoration: none !important;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+            backdrop-filter: blur(10px) !important;
+        }
+
+        .cta-play {
+            background: rgba(16, 185, 129, 0.12) !important;
+            color: #34d399 !important;
+            border: 1px solid rgba(52, 211, 153, 0.4) !important;
+            box-shadow: 0 0 15px rgba(52, 211, 153, 0.2) !important;
+        }
+
+        .cta-play:hover {
+            background: rgba(16, 185, 129, 0.25) !important;
+            box-shadow: 0 0 25px rgba(52, 211, 153, 0.5) !important;
+            transform: translateY(-2px) !important;
+            color: #ffffff !important;
+        }
+
+        .cta-apple {
+            background: rgba(255, 255, 255, 0.08) !important;
+            color: #ffffff !important;
+            border: 1px solid rgba(255, 255, 255, 0.25) !important;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.05) !important;
+        }
+
+        .cta-apple:hover {
+            background: rgba(255, 255, 255, 0.2) !important;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.3) !important;
+            transform: translateY(-2px) !important;
+            color: #ffffff !important;
+        }
+
+        .cta-gitlab {
+            background: rgba(249, 115, 22, 0.12) !important;
+            color: #fb923c !important;
+            border: 1px solid rgba(251, 146, 60, 0.4) !important;
+            box-shadow: 0 0 15px rgba(251, 146, 60, 0.2) !important;
+        }
+
+        .cta-gitlab:hover {
+            background: rgba(249, 115, 22, 0.25) !important;
+            box-shadow: 0 0 25px rgba(251, 146, 60, 0.5) !important;
+            transform: translateY(-2px) !important;
+            color: #ffffff !important;
+        }
+
+        /* Glass Panel Box */
+        .glass-panel {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 100%) !important;
+            border: 1px solid rgba(255, 255, 255, 0.12) !important;
+            border-top: 1px solid rgba(255, 255, 255, 0.25) !important;
+            border-radius: 24px !important;
+            padding: 35px !important;
+            -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+            backdrop-filter: blur(20px) saturate(180%) !important;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+            margin-bottom: 30px !important;
+        }
+
+        .panel-heading-cyan {
+            font-size: 22px !important;
+            font-weight: 600 !important;
+            color: #38bdf8 !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 12px !important;
+            margin-top: 0 !important;
+            margin-bottom: 20px !important;
+        }
+
+        .fluid-desc {
+            color: #cbd5e1 !important;
+            line-height: 1.8 !important;
+            font-size: 16px !important;
+            font-weight: 300 !important;
+        }
+
+        /* Glowing Tech Cloud Pills */
+        .refined-tech-pill {
+            display: inline-block !important;
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.15) 0%, rgba(56, 189, 248, 0.05) 100%) !important;
+            color: #38bdf8 !important;
+            border: 1px solid rgba(56, 189, 248, 0.35) !important;
+            padding: 8px 18px !important;
+            border-radius: 50px !important;
+            font-size: 13px !important;
+            font-weight: 500 !important;
+            margin: 5px 6px 5px 0 !important;
+            box-shadow: 0 0 12px rgba(56, 189, 248, 0.15) !important;
+            backdrop-filter: blur(5px) !important;
+        }
+
+        /* Mobile Screens Grid with Phone Bezel Glows */
+        .showcase-grid {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)) !important;
+            gap: 25px !important;
+            margin-top: 30px !important;
+        }
+
+        .showcase-card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            border-radius: 24px !important;
+            padding: 12px !important;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+        }
+
+        .showcase-card:hover {
+            transform: translateY(-8px) scale(1.02) !important;
+            border-color: rgba(56, 189, 248, 0.5) !important;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(56, 189, 248, 0.25) !important;
+        }
+
+        .phone-mockup img {
+            width: 100% !important;
+            height: auto !important;
+            border-radius: 18px !important;
+            display: block !important;
+        }
+
+        .screen-caption {
+            text-align: center !important;
+            padding: 14px 10px 6px !important;
+            font-weight: 600 !important;
+            font-size: 13px !important;
+            color: #94a3b8 !important;
+            letter-spacing: 0.8px !important;
+        }
+
+        @media (max-width: 768px) {
+            .project-title-cyan { font-size: 38px !important; }
+            .glass-panel { padding: 25px !important; }
+        }
+    </style>
+
+    <script type="text/javascript">
+        function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.height = "0%";
+        }
+
+        $(window).on('load', function () {
+            $('.nav-header').hide();
+            $('.prevapp').hide();
+
+            $('.loader').fadeOut(800, function () {
+                $('.prevapp').show().addClass('animated fadeIn');
+                $('.nav-header').show().addClass('animated fadeIn');
+            });
+        }); 
+    </script>
+</head>
+
+<body>
+
+    <div id="header"></div>
+
+    <script>
+        fetch("components/header.html")
+            .then(r => r.text())
+            .then(html => {
+                document.getElementById("header").innerHTML = html;
+            })
+            .finally(() => {
+                document.body.style.visibility = "visible";
+            });
+    </script>
+
+    <article>
+        <!-- Top Nav Header -->
+        <section class="nav-header">
+            <a class="navbar-brand" href="index.html">
+                <img class="nav-logo" src="img/saad-logo-header.svg" alt="Saad Khurshid Logo">
+            </a>
+            <img class="navbar-menu" src="img/menu.svg" style="cursor:pointer" onclick="openNav()" alt="Menu">
+        </section>
+
+        <section class="prevapp">
+            <div class="glass-view-container">
+                
+                <!-- Glossy Hero Section -->
+                <div class="project-hero-card">
+                    <h1 class="project-title-cyan">Ajzal Benaa</h1>
+                    <p class="project-tagline">
+                        Bilingual E-Commerce: Swiftly Bridging Markets with Native Performance & Right-to-Left (RTL) Adaptability.
+                    </p>
+
+                    <!-- Glow Action Pills -->
+                    <div class="refined-btn-group">
+                        <a class="refined-cta cta-play" href="https://play.google.com/store/apps/details?id=com.app.finiexsoft" target="_blank">
+                            <i class="fa fa-android"></i> View on Play Store
+                        </a>
+                        <a class="refined-cta cta-apple" href="https://apps.apple.com/pk/app/ajzal-benaa/id1633191125" target="_blank">
+                            <i class="fa fa-apple"></i> View on App Store
+                        </a>
+                        <a class="refined-cta cta-gitlab" href="https://gitlab.com/saad044/ajzal-benaa" target="_blank">
+                            <i class="fa fa-gitlab"></i> View GitLab Repo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Info Grid -->
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="glass-panel">
+                            <h3 class="panel-heading-cyan"><i class="fa fa-info-circle"></i> Project Impact & Core Features</h3>
+                            <p class="fluid-desc">
+                                <strong>Ajzal Benaa</strong> is a high-performance retail solution built for Middle Eastern e-commerce. Built with <strong>Flutter</strong>, it pairs native smoothness with full dynamic localization for both English and Arabic (including full RTL screen switching, layout mirroring, and custom component adaptations).
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="glass-panel">
+                            <h3 class="panel-heading-cyan"><i class="fa fa-code"></i> Tech Stack</h3>
+                            <div style="margin-top: 15px;">
+                                <span class="refined-tech-pill">Flutter</span>
+                                <span class="refined-tech-pill">Dart</span>
+                                <span class="refined-tech-pill">REST APIs</span>
+                                <span class="refined-tech-pill">i18n Localization</span>
+                                <span class="refined-tech-pill">GitLab CI/CD</span>
+                                <span class="refined-tech-pill">RTL Engine</span>
+                                <span class="refined-tech-pill">Android</span>
+                                <span class="refined-tech-pill">iOS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- App Showcase Section -->
+                <div class="glass-panel">
+                    <h3 class="panel-heading-cyan"><i class="fa fa-mobile"></i> App Showcase</h3>
+                    <p style="color: #94a3b8; margin-bottom: 25px;">Latest edge-to-edge application screens</p>
+                    
+                    <div class="showcase-grid">
+                        <div class="showcase-card">
+                            <div class="phone-mockup">
+                                <img src="img/ajzalBenaa/1.jpeg" alt="Sign in Screen">
+                            </div>
+                            <div class="screen-caption">SIGN IN</div>
+                        </div>
+                        <div class="showcase-card">
+                            <div class="phone-mockup">
+                                <img src="img/ajzalBenaa/2.jpeg" alt="Home Screen">
+                            </div>
+                            <div class="screen-caption">HOME FEED</div>
+                        </div>
+                        <div class="showcase-card">
+                            <div class="phone-mockup">
+                                <img src="img/ajzalBenaa/3.jpeg" alt="Product Detail">
+                            </div>
+                            <div class="screen-caption">PRODUCT DETAILS</div>
+                        </div>
+                        <div class="showcase-card">
+                            <div class="phone-mockup">
+                                <img src="img/ajzalBenaa/4.jpeg" alt="Cart Screen">
+                            </div>
+                            <div class="screen-caption">SHOPPING CART</div>
+                        </div>
+                        <div class="showcase-card">
+                            <div class="phone-mockup">
+                                <img src="img/ajzalBenaa/5.jpeg" alt="Checkout Step 1">
+                            </div>
+                            <div class="screen-caption">CHECKOUT FORM</div>
+                        </div>
+                        <div class="showcase-card">
+                            <div class="phone-mockup">
+                                <img src="img/ajzalBenaa/6.jpeg" alt="Checkout Step 2">
+                            </div>
+                            <div class="screen-caption">ADDRESS CONFIRMATION</div>
+                        </div>
+                        <div class="showcase-card">
+                            <div class="phone-mockup">
+                                <img src="img/ajzalBenaa/7.jpeg" alt="Checkout Step 3">
+                            </div>
+                            <div class="screen-caption">PAYMENT OPTIONS</div>
+                        </div>
+                        <div class="showcase-card">
+                            <div class="phone-mockup">
+                                <img src="img/ajzalBenaa/8.jpeg" alt="Categories">
+                            </div>
+                            <div class="screen-caption">CATEGORY GRID</div>
+                        </div>
+                        <div class="showcase-card">
+                            <div class="phone-mockup">
+                                <img src="img/ajzalBenaa/9.jpeg" alt="Profile Screen">
+                            </div>
+                            <div class="screen-caption">USER PROFILE</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="personal-contact">
+                            <a class="mobile" href="tel:+923129191949">
+                                <img class="contact-icon-1" src="img/ic_call_white.svg" alt="Call">+923129191949
+                            </a>
+                            <div style="margin:20px;">
+                                <a class="email" href="mailto:saadkhurshid838@gmail.com?Subject=Portfolio%20Inquiry" target="_top">
+                                    <img class="contact-icon-1" src="img/ic_email_white_12px.svg" alt="Email">saadkhurshid838@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+</body>
+
+</html>
