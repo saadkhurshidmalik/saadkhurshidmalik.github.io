@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pro Practice Tracker - Saad Khurshid</title>
+
+    <!-- Font Awesome & Fonts -->
+    <link rel="stylesheet" href="includes/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="includes/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Shared Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <div id="header"></div>
+
+    <script>
+        fetch("components/header.html")
+            .then(r => r.text())
+            .then(html => {
+                document.getElementById("header").innerHTML = html;
+            })
+            .finally(a => {
+                document.body.style.visibility = "visible";
+            });
+    </script>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1 class="hero-title">Pro Practice Tracker</h1>
+        <p class="hero-subtitle">Interactive Practice Log & Analytics App for Music Students</p>
+
+        <div class="button-row">
+            <a href="#" class="btn-pill btn-play" target="_blank">
+                <i class="fa fa-play"></i> View on Play Store
+            </a>
+        </div>
+    </section>
+
+    <!-- Floating Glass Card -->
+    <div class="main-container">
+        <div class="floating-glass-card">
+            
+            <div class="features-list">
+                <h2 class="card-heading">Project Impact & Core Features</h2>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa fa-clock-o"></i></div>
+                    <span>Practice Session Timer & Metronome Integration</span>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa fa-line-chart"></i></div>
+                    <span>Goal Tracking & Weekly Performance Analytics</span>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa fa-list"></i></div>
+                    <span>Custom Piece & Repertoire Management</span>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa fa-user"></i></div>
+                    <span>Teacher Feedback & Lesson Notes Integration</span>
+                </div>
+            </div>
+
+            <div class="tech-cloud-container">
+                <div class="tech-cloud-title">Tech Stack</div>
+                <div class="tech-pills-wrapper">
+                    <span class="glow-pill">Mobile Development</span>
+                    <span class="glow-pill">Audio Tools Engine</span>
+                    <span class="glow-pill">REST APIs</span>
+                    <span class="glow-pill">Analytics</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Showcase Section -->
+    <section class="showcase-section">
+        <h3 class="showcase-title">App Showcase</h3>
+        <div class="mockup-grid">
+            <div class="phone-card">
+                <div class="phone-frame">
+                    <img src="img/proPracticeTracker/1.png" alt="Dashboard Screen">
+                </div>
+                <div class="caption">Dashboard</div>
+            </div>
+
+            <div class="phone-card">
+                <div class="phone-frame">
+                    <img src="img/proPracticeTracker/2.png" alt="Timer Screen">
+                </div>
+                <div class="caption">Practice Session</div>
+            </div>
+
+            <div class="phone-card">
+                <div class="phone-frame">
+                    <img src="img/proPracticeTracker/3.png" alt="Analytics Screen">
+                </div>
+                <div class="caption">Progress Analytics</div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
