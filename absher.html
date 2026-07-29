@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Absher Employee Portal - Saad Khurshid</title>
+
+    <!-- Font Awesome & Fonts -->
+    <link rel="stylesheet" href="includes/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="includes/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Shared Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <div id="header"></div>
+
+    <script>
+        fetch("components/header.html")
+            .then(r => r.text())
+            .then(html => {
+                document.getElementById("header").innerHTML = html;
+            })
+            .finally(a => {
+                document.body.style.visibility = "visible";
+            });
+    </script>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1 class="hero-title">Absher (Flutter)</h1>
+        <p class="hero-subtitle">Enterprise Employee Portal & Request Management System</p>
+
+        <div class="button-row">
+            <a href="#" class="btn-pill btn-play" target="_blank">
+                <i class="fa fa-play"></i> View on Play Store
+            </a>
+            <a href="#" class="btn-pill btn-apple" target="_blank">
+                <i class="fa fa-apple"></i> View on App Store
+            </a>
+        </div>
+    </section>
+
+    <!-- Floating Glass Card -->
+    <div class="main-container">
+        <div class="floating-glass-card">
+            
+            <div class="features-list">
+                <h2 class="card-heading">Project Impact & Core Features</h2>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa fa-id-card"></i></div>
+                    <span>Personal Employee Profiles & Assigned Assets Tracker</span>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa fa-paper-plane"></i></div>
+                    <span>Digital Leave & Asset Request Workflows</span>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa fa-check-square-o"></i></div>
+                    <span>Manager Approvals & Team Status Dashboard</span>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa fa-bell"></i></div>
+                    <span>Real-Time Push Notifications for Request Statuses</span>
+                </div>
+            </div>
+
+            <div class="tech-cloud-container">
+                <div class="tech-cloud-title">Tech Stack</div>
+                <div class="tech-pills-wrapper">
+                    <span class="glow-pill">Flutter</span>
+                    <span class="glow-pill">Dart</span>
+                    <span class="glow-pill">Enterprise REST APIs</span>
+                    <span class="glow-pill">Push Notifications</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Showcase Section -->
+    <section class="showcase-section">
+        <h3 class="showcase-title">App Showcase</h3>
+        <div class="mockup-grid">
+            <div class="phone-card">
+                <div class="phone-frame">
+                    <img src="img/absher/1.png" alt="Employee Dashboard">
+                </div>
+                <div class="caption">Employee Profile & Assets</div>
+            </div>
+
+            <div class="phone-card">
+                <div class="phone-frame">
+                    <img src="img/absher/2.png" alt="Request Submission">
+                </div>
+                <div class="caption">Create Request</div>
+            </div>
+
+            <div class="phone-card">
+                <div class="phone-frame">
+                    <img src="img/absher/3.png" alt="Manager Approvals">
+                </div>
+                <div class="caption">Manager Approvals</div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
