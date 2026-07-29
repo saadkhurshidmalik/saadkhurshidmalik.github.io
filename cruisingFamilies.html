@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cruising Families - Saad Khurshid</title>
+
+    <!-- Font Awesome & Fonts -->
+    <link rel="stylesheet" href="includes/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="includes/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Shared Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <div id="header"></div>
+
+    <script>
+        fetch("components/header.html")
+            .then(r => r.text())
+            .then(html => {
+                document.getElementById("header").innerHTML = html;
+            })
+            .finally(a => {
+                document.body.style.visibility = "visible";
+            });
+    </script>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1 class="hero-title">Cruising Families (Flutter)</h1>
+        <p class="hero-subtitle">Social Community Platform for Cruise Ship Travelers</p>
+
+        <div class="button-row">
+            <a href="https://gitlab.com/saad044/cruising-families-flutter" class="btn-pill btn-gitlab" target="_blank">
+                <i class="fa fa-gitlab"></i> View GitLab Repository
+            </a>
+    </section>
+
+    <!-- Floating Glass Card -->
+    <div class="main-container">
+        <div class="floating-glass-card">
+            
+            <div class="features-list">
+                <h2 class="card-heading">Project Impact & Core Features</h2>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa fa-ship"></i></div>
+                    <span>Cruise Itinerary & Onboard Activity Planner</span>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa fa-comments"></i></div>
+                    <span>Offline & Onboard Family Messaging Engine</span>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa fa-users"></i></div>
+                    <span>Family Meetups & Traveling Community Groups</span>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa fa-map-marker"></i></div>
+                    <span>Port of Call Recommendations & Excursion Finder</span>
+                </div>
+            </div>
+
+            <div class="tech-cloud-container">
+                <div class="tech-cloud-title">Tech Stack</div>
+                <div class="tech-pills-wrapper">
+                    <span class="glow-pill">Flutter</span>
+                    <span class="glow-pill">Dart</span>
+                    <span class="glow-pill">Firebase</span>
+                    <span class="glow-pill">Chat Engine</span>
+                    <span class="glow-pill">Offline Sync</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Showcase Section -->
+    <section class="showcase-section">
+        <h3 class="showcase-title">App Showcase</h3>
+        <div class="mockup-grid">
+            <div class="phone-card">
+                <div class="phone-frame">
+                    <img src="img/cruisingFamilies/1.png" alt="Login">
+                </div>
+                <div class="caption">Login</div>
+            </div>
+
+            <div class="phone-card">
+                <div class="phone-frame">
+                    <img src="img/cruisingFamilies/2.png" alt="Register">
+                </div>
+                <div class="caption">Register</div>
+            </div>
+
+            <div class="phone-card">
+                <div class="phone-frame">
+                    <img src="img/cruisingFamilies/3.png" alt="Google Map Integration">
+                </div>
+                <div class="caption">Google Map Integration</div>
+            </div>
+
+            <div class="phone-card">
+                <div class="phone-frame">
+                    <img src="img/cruisingFamilies/4.png" alt="Options Popup">
+                </div>
+                <div class="caption">Options Popup</div>
+            </div>
+
+            <div class="phone-card">
+                <div class="phone-frame">
+                    <img src="img/cruisingFamilies/5.png" alt="Friends">
+                </div>
+                <div class="caption">Friends</div>
+            </div>
+
+            <div class="phone-card">
+                <div class="phone-frame">
+                    <img src="img/cruisingFamilies/6.png" alt="Blogs">
+                </div>
+                <div class="caption">Blogs</div>
+            </div>
+
+            <div class="phone-card">
+                <div class="phone-frame">
+                    <img src="img/cruisingFamilies/7.png" alt="Map Filters">
+                </div>
+                <div class="caption">Map Filters</div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
