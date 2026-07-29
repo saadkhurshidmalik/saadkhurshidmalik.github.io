@@ -1091,6 +1091,15 @@
         <i class="fa fa-arrow-right arrow"></i>
       </a>
 
+      <a href="businessCard.html" id="project-businessCardApp" class="work-row reveal">
+        <span class="num">18</span>
+        <h3><i class="fa fa-id-card-o"></i>Business Card (Flutter)</h3>
+        <span class="desc">Digital contact card and networking app for instant vCard and social link sharing via QR
+          code.</span>
+        <span class="tags"><span>Flutter</span><span>Networking</span><span>vCard</span></span>
+        <i class="fa fa-arrow-right arrow"></i>
+      </a>
+
 
     </div>
   </section>
@@ -1166,31 +1175,31 @@
     }
 
     $(document).ready(function () {
-  // 1. Save the clicked project ID to sessionStorage before leaving index.html
-  $('.work-row').on('click', function () {
-    var projectId = $(this).attr('id');
-    if (projectId) {
-      sessionStorage.setItem('lastClickedProject', projectId);
-    }
-  });
+      // 1. Save the clicked project ID to sessionStorage before leaving index.html
+      $('.work-row').on('click', function () {
+        var projectId = $(this).attr('id');
+        if (projectId) {
+          sessionStorage.setItem('lastClickedProject', projectId);
+        }
+      });
 
-  // 2. On page load, check if there's a stored project ID to scroll back to
-  var lastClickedId = sessionStorage.getItem('lastClickedProject');
-  
-  if (lastClickedId) {
-    var $targetElement = $('#' + lastClickedId);
+      // 2. On page load, check if there's a stored project ID to scroll back to
+      var lastClickedId = sessionStorage.getItem('lastClickedProject');
 
-    if ($targetElement.length) {
-      // Smooth scroll to the last clicked project
-      $('html, body').animate({
-        scrollTop: $targetElement.offset().top - 100 // Adjust '- 100' for your fixed header height
-      }, 400);
-    }
+      if (lastClickedId) {
+        var $targetElement = $('#' + lastClickedId);
 
-    // Clear it so it won't scroll automatically if the user manually reloads/navigates back later
-    sessionStorage.removeItem('lastClickedProject');
-  }
-});
+        if ($targetElement.length) {
+          // Smooth scroll to the last clicked project
+          $('html, body').animate({
+            scrollTop: $targetElement.offset().top - 100 // Adjust '- 100' for your fixed header height
+          }, 400);
+        }
+
+        // Clear it so it won't scroll automatically if the user manually reloads/navigates back later
+        sessionStorage.removeItem('lastClickedProject');
+      }
+    });
   </script>
 
 
