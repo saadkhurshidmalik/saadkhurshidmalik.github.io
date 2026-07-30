@@ -2298,3 +2298,18 @@ footer.site-foot {
         transition: none;
     }
 }
+
+
+/* index page css */
+
+.device.d1 {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.7) 100%), url('../img/better1-preview.jpg');
+}
+
+.device.d2 {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.7) 100%), url('../img/bemycourier-preview.jpg');
+}
+
+.device.d3 {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.7) 100%), url('../img/warfarechat-preview.jpg');
+}
