@@ -1928,18 +1928,42 @@ h1.headline em {
     height: 380px;
     perspective: 1000px;
 }
-
 .device {
-    position: absolute;
-    width: 190px;
-    height: 280px;
-    border-radius: 28px;
-    box-shadow: 0 30px 60px -20px rgba(17, 19, 24, 0.28);
-    transition: transform .25s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 16px;
+  position: absolute;
+  width: 190px;
+  height: 280px;
+  border-radius: 28px;
+  box-shadow: 0 30px 60px -20px rgba(17, 19, 24, 0.28);
+  transition: transform .25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+  
+  /* Pure image rules */
+  background-size: cover !important;
+  background-position: center top !important; /* "center top" works great for phone screenshots */
+  background-repeat: no-repeat !important;
+  overflow: hidden; /* Clips the gradient overlay to rounded corners */
+}
+
+/* Gradient overlay on top of background image */
+.device::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 1;
+}
+
+/* Keep text labels above the gradient overlay */
+.device .tag,
+.device .label {
+  position: relative;
+  z-index: 2;
 }
 
 .device .tag {
