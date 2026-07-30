@@ -515,7 +515,14 @@
     }
 
     .device {
-      position: absolute;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      /* Optional: keeps text positioning sharp on top of images */
+      position: relative;
+      overflow: hidden;
+
+      /* position: absolute; */
       width: 190px;
       height: 280px;
       border-radius: 28px;
