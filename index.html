@@ -963,6 +963,195 @@
         transition: none;
       }
     }
+
+
+    /* Contact Modal Base (Light Overlay) */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.4);
+      /* Softer backdrop dim */
+      backdrop-filter: blur(6px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+    }
+
+    /* Modal Card - Light Theme */
+    .modal-card {
+      position: relative;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      width: 90%;
+      max-width: 440px;
+      padding: 32px 28px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+      transform: translateY(12px);
+      transition: transform 0.25s ease;
+      color: #1a1d20;
+    }
+
+    .modal-overlay.active .modal-card {
+      transform: translateY(0);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      background: transparent;
+      border: none;
+      font-size: 24px;
+      color: #718096;
+      cursor: pointer;
+      transition: color 0.15s;
+    }
+
+    .modal-close:hover {
+      color: #1a202c;
+    }
+
+    .modal-header {
+      margin-bottom: 24px;
+    }
+
+    .modal-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #0f172a;
+      /* Sharp, high-contrast title */
+      margin: 0 0 6px 0;
+    }
+
+    .modal-subtitle {
+      font-size: 13.5px;
+      color: #64748b;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    /* Contact Items - Light Layout */
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 14px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      transition: border-color 0.15s ease;
+    }
+
+    .contact-item:hover {
+      border-color: #cbd5e1;
+    }
+
+    .contact-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      background: #e2e8f0;
+      color: #334155;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .contact-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      color: #64748b;
+    }
+
+    .contact-value {
+      font-size: 14px;
+      font-weight: 600;
+      color: #0f172a;
+      text-decoration: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .contact-value:hover {
+      color: #0284c7;
+      /* Highlight link on hover */
+      text-decoration: underline;
+    }
+
+    .copy-btn,
+    .external-btn {
+      background: transparent;
+      border: none;
+      color: #64748b;
+      padding: 8px;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: all 0.15s ease;
+    }
+
+    .copy-btn:hover,
+    .external-btn:hover {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+
+
+    /* Contact Me Button - White Theme */
+    #open-contact-modal {
+      background-color: #ffffff !important;
+      color: #0f172a !important;
+      border: 1px solid #cbd5e1 !important;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      transition: all 0.2s ease;
+    }
+
+    #open-contact-modal:hover {
+      background-color: #f8fafc !important;
+      border-color: #94a3b8 !important;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #open-contact-modal:active {
+      transform: translateY(0);
+    }
   </style>
 </head>
 
@@ -988,12 +1177,15 @@
         checkout flows to real-time logistics.</p>
       <div class="hero-ctas">
         <a href="#work" class="btn primary">View the work <i class="fa fa-arrow-down"></i></a>
-        <a href="mailto:saadkhurshid838@gmail.com" class="btn ghost">Email me</a>
+        <!-- Trigger Button -->
+        <button id="open-contact-modal" class="btn primary" style="cursor: pointer;">
+          <i class="fa fa-envelope" style="margin-right: 8px;"></i>Contact Me
+        </button>
       </div>
       <div class="stat-inline">
         <span><b>8+</b> years experience</span><span class="sep">·</span>
         <span><b>12+</b> apps shipped</span><span class="sep">·</span>
-        <span><b>Flutter / Kotlin / Swift</b> stack</span>
+        <span><b>Flutter - Dart | Native Android - Kotlin/Java / iOS - Swift</b> stack</span>
       </div>
     </div>
 
@@ -1149,151 +1341,164 @@
     <h2 class="sec-title display">Selected work</h2>
     <div class="row-list">
 
-      <a href="better1.html" class="work-row reveal" id="project-better1">
+      <!-- 01. Absher -->
+      <a href="absher.html" class="work-row reveal" id="project-absher">
         <span class="num">01</span>
+        <h3><i class="fa fa-users"></i>Absher (Flutter)</h3>
+        <span class="desc">Employee portal for viewing personal data and assets, submitting requests, and managing team
+          approvals.</span>
+        <span class="tags"><span>Flutter</span><span>Dart</span><span>HR Portal</span></span>
+        <i class="fa fa-arrow-right arrow"></i>
+      </a>
+
+      <!-- 02. Better1 -->
+      <a href="better1.html" class="work-row reveal" id="project-better1">
+        <span class="num">02</span>
         <h3><i class="fa fa-shopping-cart"></i>Better1</h3>
         <span class="desc">E-commerce app engineered for frictionless product exploration and checkout.</span>
-        <span class="tags"><span>Android</span><span>REST API</span></span>
+        <span class="tags"><span>Android</span><span>iOS</span><span>Kotlin</span><span>Swift</span></span>
         <i class="fa fa-arrow-right arrow"></i>
       </a>
 
+      <!-- 03. Lola -->
+      <a href="lola.html" class="work-row reveal" id="project-lola">
+        <span class="num">03</span>
+        <h3><i class="fa fa-book"></i>Lola (Native android/iOS)</h3>
+        <span class="desc">Native wellness journaling app focused on daily reflection, mood tracking, and personal
+          growth.</span>
+        <span class="tags"><span>Android</span><span>iOS</span><span>Kotlin</span><span>Swift</span></span>
+        <i class="fa fa-arrow-right arrow"></i>
+      </a>
+
+      <!-- 04. Steps Challenge -->
+      <a href="stepsChallenge.html" class="work-row reveal" id="project-stepsChallenge">
+        <span class="num">04</span>
+        <h3><i class="fa fa-heartbeat"></i>Steps Challenge (Flutter)</h3>
+        <span class="desc">Activity tracking and gamified step-counting application with leaderboards and fitness
+          goals.</span>
+        <span class="tags"><span>Flutter</span><span>Dart</span><span>Gamification</span></span>
+        <i class="fa fa-arrow-right arrow"></i>
+      </a>
+
+      <!-- 05. Business Card -->
+      <a href="businessCard.html" class="work-row reveal" id="project-businessCardApp">
+        <span class="num">05</span>
+        <h3><i class="fa fa-id-card-o"></i>Business Card (Flutter)</h3>
+        <span class="desc">Digital contact card and networking app for instant vCard and social link sharing via QR
+          code.</span>
+        <span class="tags"><span>Flutter</span><span>Dart</span><span>Networking</span></span>
+        <i class="fa fa-arrow-right arrow"></i>
+      </a>
+
+      <!-- 06. ScoreCarts Agent Blue -->
       <a href="scAgentBlue.html" class="work-row reveal" id="project-scAgentBlue">
-        <span class="num">02</span>
+        <span class="num">06</span>
         <h3><i class="fa fa-map-marker"></i>ScoreCarts Agent Blue</h3>
         <span class="desc">Field agent data collection and location tracking mobile app.</span>
-        <span class="tags"><span>Google Maps</span><span>Location</span></span>
+        <span class="tags"><span>Android</span><span>Kotlin</span><span>Java</span></span>
         <i class="fa fa-arrow-right arrow"></i>
       </a>
 
-      <a href="sneakerMaps.html" class="work-row reveal" id="project-sneakerMaps">
-        <span class="num">03</span>
-        <h3><i class="fa fa-street-view"></i>Sneaker Maps</h3>
-        <span class="desc">Location-aware directory and store locator for sneaker boutiques.</span>
-        <span class="tags"><span>Geolocation</span><span>Maps</span></span>
-        <i class="fa fa-arrow-right arrow"></i>
-      </a>
-
-      <a href="appravo.html" class="work-row reveal" id="project-appravo">
-        <span class="num">04</span>
-        <h3><i class="fa fa-check-square-o"></i>Appravo</h3>
-        <span class="desc">Workflow and task approval portal built for rapid operational sign-offs.</span>
-        <span class="tags"><span>Mobile</span><span>Firebase</span></span>
-        <i class="fa fa-arrow-right arrow"></i>
-      </a>
-
-      <a href="mission66.html" class="work-row reveal" id="project-mission66">
-        <span class="num">05</span>
-        <h3><i class="fa fa-flag"></i>Mission 66</h3>
-        <span class="desc">Interactive activity tracking application with customized user routines.</span>
-        <span class="tags"><span>Android</span><span>Custom UI</span></span>
-        <i class="fa fa-arrow-right arrow"></i>
-      </a>
-
-      <a href="beMyCourier.html" class="work-row reveal" id="project-beMyCourier">
-        <span class="num">06</span>
-        <h3><i class="fa fa-truck"></i>Be My Courier</h3>
-        <span class="desc">Peer-to-peer parcel logistics and live courier assignment service.</span>
-        <span class="tags"><span>Maps API</span><span>Real-time</span></span>
-        <i class="fa fa-arrow-right arrow"></i>
-      </a>
-
-      <!-- Hidden by default -->
-      <a href="AjzalBenaa.html" id="project-AjzalBenaa" class="work-row reveal"">
-        <span class=" num">07</span>
-        <h3><i class="fa fa-building"></i>Ajzal Benaa</h3>
-        <span class="desc">E-Commerce Application &amp; Designed for the gulf countries.</span>
-        <span class="tags"><span>Enterprise</span><span>REST API</span></span>
-        <i class="fa fa-arrow-right arrow"></i>
-      </a>
-
-      <a href="jobso.html" id="project-jobso" class="work-row reveal">
-        <span class="num">08</span>
-        <h3><i class="fa fa-briefcase"></i>Jobso</h3>
-        <span class="desc">Direct candidate profile matching and job opportunity portal.</span>
-        <span class="tags"><span>Job Matching</span><span>Profiles</span></span>
-        <i class="fa fa-arrow-right arrow"></i>
-      </a>
-
-      <a href="warfareChat.html" id="project-warfareChat" class="work-row reveal">
-        <span class="num">09</span>
-        <h3><i class="fa fa-comments"></i>Warfare Chat</h3>
-        <span class="desc">Real-time messaging platform with live channels and instant notifications.</span>
-        <span class="tags"><span>Chat Engine</span><span>Firebase</span></span>
-        <i class="fa fa-arrow-right arrow"></i>
-      </a>
-
-      <a href="proPracticeTracker.html" id="project-proPracticeTracker" class="work-row reveal">
-        <span class="num">10</span>
-        <h3><i class="fa fa-music"></i>Pro Practice Tracker</h3>
-        <span class="desc">Interactive practice log and analytics app helping music students track routines, set goals,
-          and improve performance.</span>
-        <span class="tags"><span>Music Ed</span><span>Analytics</span></span>
-        <i class="fa fa-arrow-right arrow"></i>
-      </a>
-
-      <a href="cruisingFamilies.html" class="work-row reveal project-more" id="project-cruisingFamilies"
-        style="display: none;">
-        <span class="num">11</span>
-        <h3><i class="fa fa-ship"></i>Cruising Families (Flutter)</h3>
-        <span class="desc">Social community platform connecting families traveling on cruise ships with offline
-          messaging and itineraries.</span>
-        <span class="tags"><span>Flutter</span><span>Community</span></span>
-        <i class="fa fa-arrow-right arrow"></i>
-      </a>
-
-      <a href="archeia.html" class="work-row reveal project-more" id="project-archeia" style="display: none;">
-        <span class="num">12</span>
-        <h3><i class="fa fa-trophy"></i>Archeia (Flutter)</h3>
-        <span class="desc">Fitness and gym management app for logging workouts, tracking exercise routines, and
-          monitoring progress.</span>
-        <span class="tags"><span>Flutter</span><span>Fitness</span></span>
-        <i class="fa fa-arrow-right arrow"></i>
-      </a>
-
-      <a href="qrCodeGenerator.html" class="work-row reveal project-more" id="project-qrCodeGenerator"
-        style="display: none;">
-        <span class="num">13</span>
+      <!-- 07. QR Code Generator -->
+      <a href="qrCodeGenerator.html" class="work-row reveal" id="project-qrCodeGenerator">
+        <span class="num">07</span>
         <h3><i class="fa fa-qrcode"></i>QR Code Generator (Flutter-Web)</h3>
         <span class="desc">Web utility for generating, styling, and exporting customized QR codes instantly.</span>
         <span class="tags"><span>Flutter Web</span><span>Utility</span></span>
         <i class="fa fa-arrow-right arrow"></i>
       </a>
 
-      <a href="stepsChallenge.html" class="work-row reveal project-more" id="project-stepsChallenge"
-        style="display: none;">
+      <!-- 08. Archeia -->
+      <a href="archeia.html" class="work-row reveal" id="project-archeia">
+        <span class="num">08</span>
+        <h3><i class="fa fa-trophy"></i>Archeia (Flutter)</h3>
+        <span class="desc">Fitness and gym management app for logging workouts, tracking exercise routines, and
+          monitoring progress.</span>
+        <span class="tags"><span>Flutter</span><span>Dart</span><span>Fitness</span></span>
+        <i class="fa fa-arrow-right arrow"></i>
+      </a>
+
+      <!-- 09. Ajzal Benaa -->
+      <a href="AjzalBenaa.html" class="work-row reveal" id="project-AjzalBenaa">
+        <span class="num">09</span>
+        <h3><i class="fa fa-building"></i>Ajzal Benaa</h3>
+        <span class="desc">E-Commerce Application &amp; Designed for the gulf countries.</span>
+        <span class="tags"><span>Flutter</span><span>Dart</span><span>Enterprise</span></span>
+        <i class="fa fa-arrow-right arrow"></i>
+      </a>
+
+      <!-- 10. Cruising Families -->
+      <a href="cruisingFamilies.html" class="work-row reveal" id="project-cruisingFamilies">
+        <span class="num">10</span>
+        <h3><i class="fa fa-ship"></i>Cruising Families (Flutter)</h3>
+        <span class="desc">Social community platform connecting families traveling on cruise ships with offline
+          messaging and itineraries.</span>
+        <span class="tags"><span>Flutter</span><span>Dart</span><span>Community</span></span>
+        <i class="fa fa-arrow-right arrow"></i>
+      </a>
+
+      <!-- 11. Sneaker Maps (Hidden by default) -->
+      <a href="sneakerMaps.html" class="work-row reveal project-more" id="project-sneakerMaps" style="display: none;">
+        <span class="num">11</span>
+        <h3><i class="fa fa-street-view"></i>Sneaker Maps</h3>
+        <span class="desc">Location-aware directory and store locator for sneaker boutiques.</span>
+        <span class="tags"><span>Android</span><span>Kotlin</span><span>Java</span></span>
+        <i class="fa fa-arrow-right arrow"></i>
+      </a>
+
+      <!-- 12. Appravo -->
+      <a href="appravo.html" class="work-row reveal project-more" id="project-appravo" style="display: none;">
+        <span class="num">12</span>
+        <h3><i class="fa fa-check-square-o"></i>Appravo</h3>
+        <span class="desc">Workflow and task approval portal built for rapid operational sign-offs.</span>
+        <span class="tags"><span>Android</span><span>Kotlin</span><span>Java</span></span>
+        <i class="fa fa-arrow-right arrow"></i>
+      </a>
+
+      <!-- 13. Mission 66 -->
+      <a href="mission66.html" class="work-row reveal project-more" id="project-mission66" style="display: none;">
+        <span class="num">13</span>
+        <h3><i class="fa fa-flag"></i>Mission 66</h3>
+        <span class="desc">Interactive activity tracking application with customized user routines.</span>
+        <span class="tags"><span>Android</span><span>iOS</span><span>Kotlin</span><span>Swift</span></span>
+        <i class="fa fa-arrow-right arrow"></i>
+      </a>
+
+      <!-- 14. Be My Courier -->
+      <a href="beMyCourier.html" class="work-row reveal project-more" id="project-beMyCourier" style="display: none;">
         <span class="num">14</span>
-        <h3><i class="fa fa-heartbeat"></i>Steps Challenge (Flutter)</h3>
-        <span class="desc">Activity tracking and gamified step-counting application with leaderboards and fitness
-          goals.</span>
-        <span class="tags"><span>Flutter</span><span>Gamification</span></span>
+        <h3><i class="fa fa-truck"></i>Be My Courier</h3>
+        <span class="desc">Peer-to-peer parcel logistics and live courier assignment service.</span>
+        <span class="tags"><span>Android</span><span>Kotlin</span><span>Java</span></span>
         <i class="fa fa-arrow-right arrow"></i>
       </a>
 
-      <a href="absher.html" class="work-row reveal project-more" id="project-absher" style="display: none;">
+      <!-- 15. Jobso -->
+      <a href="jobso.html" class="work-row reveal project-more" id="project-jobso" style="display: none;">
         <span class="num">15</span>
-        <h3><i class="fa fa-users"></i>Absher (Flutter)</h3>
-        <span class="desc">Employee portal for viewing personal data and assets, submitting requests, and managing team
-          approvals.</span>
-        <span class="tags"><span>Flutter</span><span>HR Portal</span></span>
+        <h3><i class="fa fa-briefcase"></i>Jobso</h3>
+        <span class="desc">Direct candidate profile matching and job opportunity portal.</span>
+        <span class="tags"><span>Android</span><span>iOS</span><span>Kotlin</span><span>Swift</span></span>
         <i class="fa fa-arrow-right arrow"></i>
       </a>
 
-      <a href="lola.html" class="work-row reveal project-more" id="project-lola" style="display: none;">
-        <span class="num">16</span>
-        <h3><i class="fa fa-book"></i>Lola (Native android/iOS)</h3>
-        <span class="desc">Native wellness journaling app focused on daily reflection, mood tracking, and personal
-          growth.</span>
-        <span class="tags"><span>Android</span><span>iOS</span><span>Wellness</span></span>
-        <i class="fa fa-arrow-right arrow"></i>
-      </a>
-
-      <a href="businessCard.html" class="work-row reveal project-more" id="project-businessCardApp"
+      <!-- 16. Pro Practice Tracker -->
+      <a href="proPracticeTracker.html" class="work-row reveal project-more" id="project-proPracticeTracker"
         style="display: none;">
+        <span class="num">16</span>
+        <h3><i class="fa fa-music"></i>Pro Practice Tracker</h3>
+        <span class="desc">Interactive practice log and analytics app helping music students track routines, set goals,
+          and improve performance.</span>
+        <span class="tags"><span>Flutter</span><span>Dart</span><span>Analytics</span></span>
+        <i class="fa fa-arrow-right arrow"></i>
+      </a>
+
+      <!-- 17. Warfare Chat -->
+      <a href="warfareChat.html" class="work-row reveal project-more" id="project-warfareChat" style="display: none;">
         <span class="num">17</span>
-        <h3><i class="fa fa-id-card-o"></i>Business Card (Flutter)</h3>
-        <span class="desc">Digital contact card and networking app for instant vCard and social link sharing via QR
-          code.</span>
-        <span class="tags"><span>Flutter</span><span>Networking</span></span>
+        <h3><i class="fa fa-comments"></i>Warfare Chat</h3>
+        <span class="desc">Real-time messaging platform with live channels and instant notifications.</span>
+        <span class="tags"><span>Android</span><span>Kotlin</span><span>Java</span></span>
         <i class="fa fa-arrow-right arrow"></i>
       </a>
 
@@ -1306,6 +1511,85 @@
       </button>
     </div>
   </section>
+
+  <!-- Contact Modal Popup -->
+  <div id="contact-modal" class="modal-overlay" aria-hidden="true" style="display: none;">
+    <div class="modal-card">
+      <button id="close-contact-modal" class="modal-close" aria-label="Close modal">&times;</button>
+
+      <div class="modal-header">
+        <h3 class="modal-title">Get in Touch</h3>
+        <p class="modal-subtitle">Feel free to reach out directly via email, phone, or LinkedIn.</p>
+      </div>
+
+      <div class="contact-list">
+        <!-- Email Row -->
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fa fa-envelope"></i></div>
+          <div class="contact-details">
+            <span class="contact-label">Email</span>
+            <a href="mailto:saadkhurshid838@gmail.com" class="contact-value"
+              id="email-val">saadkhurshid838@gmail.com</a>
+          </div>
+          <button class="copy-btn" onclick="copyText('saadkhurshid838@gmail.com', this)" title="Copy Email">
+            <i class="fa fa-clone"></i>
+          </button>
+        </div>
+
+        <!-- Phone Row -->
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fa fa-phone"></i></div>
+          <div class="contact-details">
+            <span class="contact-label">Phone</span>
+            <a href="tel:+971589155433" class="contact-value">+971 58 915 5433</a>
+          </div>
+          <button class="copy-btn" onclick="copyText('+971589155433', this)" title="Copy Phone">
+            <i class="fa fa-clone"></i>
+          </button>
+        </div>
+
+        <!-- LinkedIn Row -->
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fa fa-linkedin"></i></div>
+          <div class="contact-details">
+            <span class="contact-label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/saad-khurshid-6529ab131/" target="_blank" rel="noopener noreferrer"
+              class="contact-value">saad-khurshid-6529ab131</a>
+          </div>
+          <a href="https://www.linkedin.com/in/saad-khurshid-6529ab131/" target="_blank" rel="noopener noreferrer"
+            class="external-btn" title="Open LinkedIn">
+            <i class="fa fa-external-link"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Toggle Script -->
+  <script>
+    document.getElementById('toggle-projects-btn').addEventListener('click', function () {
+      const hiddenProjects = document.querySelectorAll('.project-more');
+      const isExpanded = this.getAttribute('data-expanded') === 'true';
+
+      if (!isExpanded) {
+        hiddenProjects.forEach(p => {
+          p.style.display = 'grid';
+          p.classList.add('in-view');
+        });
+        this.innerHTML = 'Show Less <i class="fa fa-chevron-up" style="margin-left: 6px;"></i>';
+        this.setAttribute('data-expanded', 'true');
+      } else {
+        hiddenProjects.forEach(p => {
+          p.style.display = 'none';
+        });
+        this.innerHTML = 'View All Projects (+7 more) <i class="fa fa-chevron-down" style="margin-left: 6px;"></i>';
+        this.setAttribute('data-expanded', 'false');
+
+        // Smooth scroll back to section heading
+        document.getElementById('work').scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  </script>
 
   <!-- Script to toggle remaining projects -->
   <script>
@@ -1342,8 +1626,15 @@
       <div class="cta-social">
         <a href="https://www.linkedin.com/in/saad-khurshid-6529ab131/" target="_blank" title="LinkedIn"><i
             class="fa fa-linkedin"></i></a>
-        <a href="https://www.facebook.com/sunnymalik236/" target="_blank" title="Facebook"><i
-            class="fa fa-facebook"></i></a>
+        <!-- Email Link (opens modal or mailto) -->
+        <a href="mailto:saadkhurshid1997@gmail.com" title="Email Me">
+          <i class="fa fa-envelope"></i>
+        </a>
+
+        <!-- Phone Link -->
+        <a href="tel:+971589155433" title="Call Me">
+          <i class="fa fa-phone"></i>
+        </a>
       </div>
     </div>
   </section>
@@ -1367,6 +1658,52 @@
     document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
   </script>
 
+
+  <script>
+    const modal = document.getElementById('contact-modal');
+    const openBtn = document.getElementById('open-contact-modal');
+    const closeBtn = document.getElementById('close-contact-modal');
+
+    function openModal() {
+      modal.style.display = 'flex';
+      setTimeout(() => modal.classList.add('active'), 10);
+      modal.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      setTimeout(() => {
+        modal.style.display = 'none';
+        modal.setAttribute('aria-hidden', 'true');
+      }, 250);
+    }
+
+    openBtn.addEventListener('click', openModal);
+    closeBtn.addEventListener('click', closeModal);
+
+    // Close modal when clicking on the backdrop
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+
+    // Copy to clipboard helper
+    function copyText(text, btnElement) {
+      navigator.clipboard.writeText(text).then(() => {
+        const originalHTML = btnElement.innerHTML;
+        btnElement.innerHTML = '<i class="fa fa-check" style="color: #4CAF50;"></i>';
+        setTimeout(() => {
+          btnElement.innerHTML = originalHTML;
+        }, 1500);
+      });
+    }
+  </script>
 </body>
 
 </html>
