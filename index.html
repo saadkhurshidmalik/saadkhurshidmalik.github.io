@@ -272,15 +272,13 @@
 </body>
 
 </html> -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Saad Khurshid — Mobile Application Developer</title>
+  <title>Saad Khurshid — Senior Mobile Application Developer</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
@@ -430,8 +428,8 @@
     }
 
     h1.headline {
-      font-size: clamp(38px, 5.4vw, 60px);
-      line-height: 1.04;
+      font-size: clamp(38px, 5.4vw, 56px);
+      line-height: 1.06;
       letter-spacing: -0.02em;
       margin: 0;
       font-weight: 700;
@@ -445,10 +443,10 @@
 
     .sub {
       margin: 22px 0 0;
-      font-size: 17px;
+      font-size: 16.5px;
       color: var(--ink-soft);
       line-height: 1.6;
-      max-width: 480px;
+      max-width: 520px;
     }
 
     .hero-ctas {
@@ -515,9 +513,6 @@
     }
 
     .device {
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
       position: absolute;
       width: 190px;
       height: 280px;
@@ -528,6 +523,9 @@
       flex-direction: column;
       justify-content: flex-end;
       padding: 16px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
     .device .tag {
@@ -548,7 +546,6 @@
     .device.d1 {
       left: 8%;
       top: 6%;
-      background: linear-gradient(155deg, #5B5FEF, #8B8EF6);
       transform: rotate(-9deg);
       z-index: 1;
     }
@@ -556,7 +553,6 @@
     .device.d2 {
       left: 32%;
       top: 26%;
-      background: linear-gradient(155deg, #111318, #33363F);
       transform: rotate(4deg);
       z-index: 2;
     }
@@ -564,7 +560,6 @@
     .device.d3 {
       left: 52%;
       top: 2%;
-      background: linear-gradient(155deg, #00C896, #4FE0BE);
       transform: rotate(13deg);
       z-index: 1;
     }
@@ -625,11 +620,98 @@
       }
     }
 
+    /* ---------- overview section ---------- */
+    section.about-sec {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 80px 32px 40px;
+    }
+
+    .about-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    }
+
+    .about-card p {
+      font-size: 15.5px;
+      color: var(--ink-soft);
+      line-height: 1.7;
+      margin: 0 0 16px;
+    }
+
+    .about-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ---------- skills section ---------- */
+    section.stack-sec {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 40px 32px 80px;
+    }
+
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    @media(max-width:900px) {
+      .stack-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width:600px) {
+      .stack-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .stack-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 24px;
+    }
+
+    .stack-card i {
+      font-size: 20px;
+      color: var(--accent);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .stack-card h4 {
+      margin: 0 0 12px;
+      font-size: 16px;
+      font-family: 'Bricolage Grotesque', sans-serif;
+    }
+
+    .pill-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .pill-cloud span {
+      font-size: 11.5px;
+      font-weight: 500;
+      color: var(--ink-soft);
+      background: var(--bg);
+      border: 1px solid var(--line);
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
     /* ---------- work section ---------- */
     section.work {
       max-width: 1180px;
       margin: 0 auto;
-      padding: 80px 32px;
+      padding: 40px 32px 80px;
     }
 
     .sec-label {
@@ -663,10 +745,12 @@
 
     .work-row {
       display: grid;
-      grid-template-columns: 56px 1.4fr 1.6fr auto 24px;
+      /* Fixed width for numbers (48px) and fixed width for titles (280px) ensures 
+     the description always starts at the exact same horizontal position. */
+      grid-template-columns: 48px 280px 1fr auto 24px;
       gap: 20px;
       align-items: center;
-      padding: 26px 6px;
+      padding: 24px 8px;
       border-bottom: 1px solid var(--line);
       transition: background .18s ease;
     }
@@ -693,14 +777,36 @@
       color: var(--ink-soft);
     }
 
+    /* Ensure long project titles wrap nicely without breaking layout */
     .work-row h3 {
       margin: 0;
-      font-size: 19px;
+      font-size: 18px;
       font-weight: 700;
       font-family: 'Bricolage Grotesque', sans-serif;
       display: flex;
       align-items: center;
       gap: 10px;
+      padding-right: 12px;
+    }
+
+    /* On medium screens where 280px is too wide, let it shrink smoothly */
+    @media(max-width: 1024px) {
+      .work-row {
+        grid-template-columns: 40px 220px 1fr auto 20px;
+      }
+    }
+
+    /* Mobile responsive layout (stacks vertically below 760px) */
+    @media(max-width: 760px) {
+      .work-row {
+        grid-template-columns: 36px 1fr;
+        grid-template-areas: "num title" "num desc" "num tags";
+        row-gap: 8px;
+      }
+
+      .work-row .arrow {
+        display: none;
+      }
     }
 
     .work-row h3 i {
@@ -744,52 +850,6 @@
     .work-row:hover .arrow {
       transform: translateX(4px);
       color: var(--ink);
-    }
-
-    /* ---------- stack / about ---------- */
-    section.stack-sec {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 0 32px 80px;
-    }
-
-    .stack-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    @media(max-width:760px) {
-      .stack-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .stack-card {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 26px;
-    }
-
-    .stack-card i {
-      font-size: 20px;
-      color: var(--accent);
-      margin-bottom: 14px;
-      display: block;
-    }
-
-    .stack-card h4 {
-      margin: 0 0 8px;
-      font-size: 16px;
-      font-family: 'Bricolage Grotesque', sans-serif;
-    }
-
-    .stack-card p {
-      margin: 0;
-      font-size: 13.5px;
-      color: var(--ink-soft);
-      line-height: 1.6;
     }
 
     /* ---------- contact cta ---------- */
@@ -911,16 +971,18 @@
   <nav>
     <div class="brand"><span class="dot"></span> Saad Khurshid</div>
     <div class="nav-links">
+      <a href="#about">Overview</a>
+      <a href="#skills">Skills</a>
       <a href="#work">Work</a>
-      <a href="#stack">Stack</a>
       <a href="#contact">Contact</a>
     </div>
     <a href="mailto:saadkhurshid838@gmail.com" class="nav-cta">Say hello</a>
   </nav>
 
+  <!-- Hero Section -->
   <div class="hero">
     <div>
-      <span class="eyebrow"><i class="fa fa-circle"></i> AVAILABLE FOR HIRE</span>
+      <span class="eyebrow"><i class="fa fa-circle"></i> AVAILABLE FOR OPPORTUNITIES</span>
       <h1 class="headline display">Building mobile products that feel <em>inevitable.</em></h1>
       <p class="sub">I design and ship native iOS &amp; Android apps, and cross-platform products in Flutter — from
         checkout flows to real-time logistics.</p>
@@ -929,294 +991,382 @@
         <a href="mailto:saadkhurshid838@gmail.com" class="btn ghost">Email me</a>
       </div>
       <div class="stat-inline">
+        <span><b>8+</b> years experience</span><span class="sep">·</span>
         <span><b>12+</b> apps shipped</span><span class="sep">·</span>
-        <span><b>iOS &amp; Android</b> platforms</span><span class="sep">·</span>
-        <span><b>Kotlin / Swift / Flutter</b> stack</span>
+        <span><b>Flutter / Kotlin / Swift</b> stack</span>
       </div>
     </div>
 
     <div class="device-stack" id="deviceStack">
-      <div class="device d1" style="background-image: url('img/better1/1.png');">
+      <div class="device d1"
+        style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.0) 0%, rgba(0, 0, 0, 0.3) 100%), url('img/cards/bg1.png');">
         <span class="tag">01 · CHECKOUT</span>
         <span class="label">Better1</span>
       </div>
 
-      <div class="device d2" style="background-image: url('img/mission66/1.png');">
+      <div class="device d2"
+        style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.0) 0%, rgba(0, 0, 0, 0.3) 100%), url('img/cards/bg5.png');">
         <span class="tag">02 · LOGISTICS</span>
-        <span class="label">Mission66</span>
+        <span class="label">Be My Courier</span>
       </div>
 
-      <div class="device d3" style="background-image: url('img/mission66/1.png');">
+      <div class="device d3"
+        style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.0) 0%, rgba(0, 0, 0, 0.3) 100%), url('img/cards/bg4.png');">
         <span class="tag">03 · CHAT</span>
         <span class="label">Warfare Chat</span>
       </div>
     </div>
+  </div>
 
-    <div class="marquee-band">
-      <div class="marquee-track">
-        <span><b>Android</b></span><span><b>iOS</b></span><span><b>Kotlin</b></span><span><b>Swift</b></span><span><b>Java</b></span><span><b>Flutter</b></span><span><b>Firebase</b></span><span><b>REST
-            APIs</b></span><span><b>Google Maps SDK</b></span><span><b>Push Notifications</b></span><span><b>Material
-            Design</b></span><span><b>MVVM</b></span><span><b>MVC</b></span>
-        <span><b>Android</b></span><span><b>iOS</b></span><span><b>Kotlin</b></span><span><b>Swift</b></span><span><b>Java</b></span><span><b>Flutter</b></span><span><b>Firebase</b></span><span><b>REST
-            APIs</b></span><span><b>Google Maps SDK</b></span><span><b>Push Notifications</b></span><span><b>Material
-            Design</b></span><span><b>MVVM</b></span><span><b>MVC</b></span>
+  <!-- Marquee Band -->
+  <div class="marquee-band">
+    <div class="marquee-track">
+      <span><b>Flutter</b></span><span><b>Dart</b></span><span><b>Android
+          SDK</b></span><span><b>Kotlin</b></span><span><b>Java</b></span><span><b>Swift</b></span><span><b>iOS
+          Development</b></span><span><b>Clean
+          Architecture</b></span><span><b>MVVM</b></span><span><b>BLoC</b></span><span><b>Firebase</b></span><span><b>REST
+          APIs</b></span><span><b>MDM / ABM</b></span>
+      <span><b>Flutter</b></span><span><b>Dart</b></span><span><b>Android
+          SDK</b></span><span><b>Kotlin</b></span><span><b>Java</b></span><span><b>Swift</b></span><span><b>iOS
+          Development</b></span><span><b>Clean
+          Architecture</b></span><span><b>MVVM</b></span><span><b>BLoC</b></span><span><b>Firebase</b></span><span><b>REST
+          APIs</b></span><span><b>MDM / ABM</b></span>
+    </div>
+  </div>
+
+  <!-- Summary / Overview Section -->
+  <section class="about-sec" id="about">
+    <div class="sec-label">
+      <span class="num mono">01</span>
+      <div class="line"></div>
+    </div>
+    <h2 class="sec-title display">Overview</h2>
+    <div class="about-card reveal">
+      <p>Senior Mobile Engineer with 8+ years of professional experience developing and maintaining mobile applications
+        across Flutter, Android, and iOS platforms. Specialized in Flutter/Dart development with strong expertise in
+        native Android (Kotlin/Java) and iOS (Swift) development.</p>
+      <p>Experienced in building scalable enterprise and consumer mobile applications using Clean Architecture, MVVM,
+        BLoC, REST APIs, Firebase services, and modern mobile engineering practices.</p>
+      <p>Strong experience across the complete mobile application lifecycle, including requirements analysis,
+        architecture design, implementation, testing, release management, production support, and enterprise application
+        deployment.</p>
+    </div>
+  </section>
+
+  <!-- Skills Matrix Section -->
+  <section class="stack-sec" id="skills">
+    <div class="sec-label">
+      <span class="num mono">02</span>
+      <div class="line"></div>
+    </div>
+    <h2 class="sec-title display">Core Skills</h2>
+    <div class="stack-grid">
+      <div class="stack-card reveal">
+        <i class="fa fa-mobile"></i>
+        <h4>Mobile Development</h4>
+        <div class="pill-cloud">
+          <span>Flutter</span>
+          <span>Dart</span>
+          <span>Android SDK</span>
+          <span>Kotlin</span>
+          <span>Java</span>
+          <span>Swift</span>
+          <span>iOS Development</span>
+          <span>Cross-platform</span>
+          <span>Native Mobile</span>
+        </div>
+      </div>
+
+      <div class="stack-card reveal">
+        <i class="fa fa-sitemap"></i>
+        <h4>Architecture &amp; Design</h4>
+        <div class="pill-cloud">
+          <span>Clean Architecture</span>
+          <span>MVVM</span>
+          <span>BLoC</span>
+          <span>Provider</span>
+          <span>Repository Pattern</span>
+          <span>SOLID Principles</span>
+          <span>OOP</span>
+        </div>
+      </div>
+
+      <div class="stack-card reveal">
+        <i class="fa fa-cloud"></i>
+        <h4>Backend &amp; Integration</h4>
+        <div class="pill-cloud">
+          <span>REST APIs</span>
+          <span>JSON</span>
+          <span>Firebase Services</span>
+          <span>Authentication</span>
+          <span>Third-party SDKs</span>
+        </div>
+      </div>
+
+      <div class="stack-card reveal">
+        <i class="fa fa-database"></i>
+        <h4>Databases</h4>
+        <div class="pill-cloud">
+          <span>Firebase Firestore</span>
+          <span>SQLite</span>
+          <span>Realm</span>
+          <span>MySQL</span>
+        </div>
+      </div>
+
+      <div class="stack-card reveal">
+        <i class="fa fa-cogs"></i>
+        <h4>Enterprise Mobile</h4>
+        <div class="pill-cloud">
+          <span>MDM</span>
+          <span>Apple Business Manager</span>
+          <span>App Store Deployment</span>
+          <span>App Signing</span>
+          <span>Provisioning</span>
+        </div>
+      </div>
+
+      <div class="stack-card reveal">
+        <i class="fa fa-wrench"></i>
+        <h4>Tools &amp; Workflow</h4>
+        <div class="pill-cloud">
+          <span>Git</span>
+          <span>Android Studio</span>
+          <span>Xcode</span>
+          <span>VS Code</span>
+          <span>Jira</span>
+        </div>
       </div>
     </div>
+  </section>
 
-    <section class="work" id="work">
-      <div class="sec-label"><span class="num mono">01</span>
-        <div class="line"></div>
-      </div>
-      <h2 class="sec-title display">Selected work</h2>
-      <div class="row-list">
+  <!-- Work Section -->
+  <section class="work" id="work">
+    <div class="sec-label">
+      <span class="num mono">03</span>
+      <div class="line"></div>
+    </div>
+    <h2 class="sec-title display">Selected work</h2>
+    <div class="row-list">
 
-        <a href="better1.html" class="work-row reveal" id="project-better1">
-          <span class="num">01</span>
-          <h3><i class="fa fa-shopping-cart"></i>Better1</h3>
-          <span class="desc">E-commerce app engineered for frictionless product exploration and checkout.</span>
-          <span class="tags"><span>Android</span><span>REST API</span></span>
-          <i class="fa fa-arrow-right arrow"></i>
-        </a>
+      <a href="better1.html" class="work-row reveal" id="project-better1">
+        <span class="num">01</span>
+        <h3><i class="fa fa-shopping-cart"></i>Better1</h3>
+        <span class="desc">E-commerce app engineered for frictionless product exploration and checkout.</span>
+        <span class="tags"><span>Android</span><span>REST API</span></span>
+        <i class="fa fa-arrow-right arrow"></i>
+      </a>
 
-        <a href="scAgentBlue.html" class="work-row reveal" id="project-scAgentBlue">
-          <span class="num">02</span>
-          <h3><i class="fa fa-map-marker"></i>ScoreCarts Agent Blue</h3>
-          <span class="desc">Field agent data collection and location tracking mobile app.</span>
-          <span class="tags"><span>Google Maps</span><span>Location</span></span>
-          <i class="fa fa-arrow-right arrow"></i>
-        </a>
+      <a href="scAgentBlue.html" class="work-row reveal" id="project-scAgentBlue">
+        <span class="num">02</span>
+        <h3><i class="fa fa-map-marker"></i>ScoreCarts Agent Blue</h3>
+        <span class="desc">Field agent data collection and location tracking mobile app.</span>
+        <span class="tags"><span>Google Maps</span><span>Location</span></span>
+        <i class="fa fa-arrow-right arrow"></i>
+      </a>
 
-        <a href="sneakerMaps.html" class="work-row reveal" id="project-sneakerMaps">
-          <span class="num">03</span>
-          <h3><i class="fa fa-street-view"></i>Sneaker Maps</h3>
-          <span class="desc">Location-aware directory and store locator for sneaker boutiques.</span>
-          <span class="tags"><span>Geolocation</span><span>Maps</span></span>
-          <i class="fa fa-arrow-right arrow"></i>
-        </a>
+      <a href="sneakerMaps.html" class="work-row reveal" id="project-sneakerMaps">
+        <span class="num">03</span>
+        <h3><i class="fa fa-street-view"></i>Sneaker Maps</h3>
+        <span class="desc">Location-aware directory and store locator for sneaker boutiques.</span>
+        <span class="tags"><span>Geolocation</span><span>Maps</span></span>
+        <i class="fa fa-arrow-right arrow"></i>
+      </a>
 
-        <a href="appravo.html" class="work-row reveal" id="project-appravo">
-          <span class="num">04</span>
-          <h3><i class="fa fa-check-square-o"></i>Appravo</h3>
-          <span class="desc">Workflow and task approval portal built for rapid operational sign-offs.</span>
-          <span class="tags"><span>Mobile</span><span>Firebase</span></span>
-          <i class="fa fa-arrow-right arrow"></i>
-        </a>
+      <a href="appravo.html" class="work-row reveal" id="project-appravo">
+        <span class="num">04</span>
+        <h3><i class="fa fa-check-square-o"></i>Appravo</h3>
+        <span class="desc">Workflow and task approval portal built for rapid operational sign-offs.</span>
+        <span class="tags"><span>Mobile</span><span>Firebase</span></span>
+        <i class="fa fa-arrow-right arrow"></i>
+      </a>
 
-        <a href="mission66.html" class="work-row reveal" id="project-mission66">
-          <span class="num">05</span>
-          <h3><i class="fa fa-flag"></i>Mission 66</h3>
-          <span class="desc">Interactive activity tracking application with customized user routines.</span>
-          <span class="tags"><span>Android</span><span>Custom UI</span></span>
-          <i class="fa fa-arrow-right arrow"></i>
-        </a>
+      <a href="mission66.html" class="work-row reveal" id="project-mission66">
+        <span class="num">05</span>
+        <h3><i class="fa fa-flag"></i>Mission 66</h3>
+        <span class="desc">Interactive activity tracking application with customized user routines.</span>
+        <span class="tags"><span>Android</span><span>Custom UI</span></span>
+        <i class="fa fa-arrow-right arrow"></i>
+      </a>
 
-        <a href="beMyCourier.html" class="work-row reveal" id="project-beMyCourier">
-          <span class="num">06</span>
-          <h3><i class="fa fa-truck"></i>Be My Courier</h3>
-          <span class="desc">Peer-to-peer parcel logistics and live courier assignment service.</span>
-          <span class="tags"><span>Maps API</span><span>Real-time</span></span>
-          <i class="fa fa-arrow-right arrow"></i>
-        </a>
+      <a href="beMyCourier.html" class="work-row reveal" id="project-beMyCourier">
+        <span class="num">06</span>
+        <h3><i class="fa fa-truck"></i>Be My Courier</h3>
+        <span class="desc">Peer-to-peer parcel logistics and live courier assignment service.</span>
+        <span class="tags"><span>Maps API</span><span>Real-time</span></span>
+        <i class="fa fa-arrow-right arrow"></i>
+      </a>
 
-        <a href="AjzalBenaa.html" class="work-row reveal" id="project-AjzalBenaa">
-          <span class="num">07</span>
-          <h3><i class="fa fa-building"></i>Ajzal Benaa</h3>
-          <span class="desc">Construction management &amp; supply tracking for field managers.</span>
-          <span class="tags"><span>Enterprise</span><span>REST API</span></span>
-          <i class="fa fa-arrow-right arrow"></i>
-        </a>
+      <!-- Hidden by default -->
+      <a href="AjzalBenaa.html" class="work-row reveal project-more" id="project-AjzalBenaa" style="display: none;">
+        <span class="num">07</span>
+        <h3><i class="fa fa-building"></i>Ajzal Benaa</h3>
+        <span class="desc">Construction management &amp; supply tracking for field managers.</span>
+        <span class="tags"><span>Enterprise</span><span>REST API</span></span>
+        <i class="fa fa-arrow-right arrow"></i>
+      </a>
 
-        <a href="jobso.html" class="work-row reveal" id="project-jobso">
-          <span class="num">08</span>
-          <h3><i class="fa fa-briefcase"></i>Jobso</h3>
-          <span class="desc">Direct candidate profile matching and job opportunity portal.</span>
-          <span class="tags"><span>Job Matching</span><span>Profiles</span></span>
-          <i class="fa fa-arrow-right arrow"></i>
-        </a>
+      <a href="jobso.html" class="work-row reveal project-more" id="project-jobso" style="display: none;">
+        <span class="num">08</span>
+        <h3><i class="fa fa-briefcase"></i>Jobso</h3>
+        <span class="desc">Direct candidate profile matching and job opportunity portal.</span>
+        <span class="tags"><span>Job Matching</span><span>Profiles</span></span>
+        <i class="fa fa-arrow-right arrow"></i>
+      </a>
 
-        <a href="warfareChat.html" class="work-row reveal" id="project-warfareChat">
-          <span class="num">09</span>
-          <h3><i class="fa fa-comments"></i>Warfare Chat</h3>
-          <span class="desc">Real-time messaging platform with live channels and instant notifications.</span>
-          <span class="tags"><span>Chat Engine</span><span>Firebase</span></span>
-          <i class="fa fa-arrow-right arrow"></i>
-        </a>
+      <a href="warfareChat.html" class="work-row reveal project-more" id="project-warfareChat" style="display: none;">
+        <span class="num">09</span>
+        <h3><i class="fa fa-comments"></i>Warfare Chat</h3>
+        <span class="desc">Real-time messaging platform with live channels and instant notifications.</span>
+        <span class="tags"><span>Chat Engine</span><span>Firebase</span></span>
+        <i class="fa fa-arrow-right arrow"></i>
+      </a>
 
-        <a href="proPracticeTracker.html" class="work-row reveal" id="project-proPracticeTracker">
-          <span class="num">10</span>
-          <h3><i class="fa fa-music"></i>Pro Practice Tracker</h3>
-          <span class="desc">Interactive practice log and analytics app helping music students track routines, set
-            goals,
-            and improve performance.</span>
-          <span class="tags"><span>Music Ed</span><span>Analytics</span><span>Tracker</span></span>
-          <i class="fa fa-arrow-right arrow"></i>
-        </a>
+      <a href="proPracticeTracker.html" class="work-row reveal project-more" id="project-proPracticeTracker"
+        style="display: none;">
+        <span class="num">10</span>
+        <h3><i class="fa fa-music"></i>Pro Practice Tracker</h3>
+        <span class="desc">Interactive practice log and analytics app helping music students track routines, set goals,
+          and improve performance.</span>
+        <span class="tags"><span>Music Ed</span><span>Analytics</span></span>
+        <i class="fa fa-arrow-right arrow"></i>
+      </a>
 
-        <a href="cruisingFamilies.html" class="work-row reveal" id="project-cruisingFamilies">
-          <span class="num">11</span>
-          <h3><i class="fa fa-ship"></i>Cruising Families (Flutter)</h3>
-          <span class="desc">Social community platform connecting families traveling on cruise ships with offline
-            messaging and itineraries.</span>
-          <span class="tags"><span>Flutter</span><span>Community</span><span>Travel</span></span>
-          <i class="fa fa-arrow-right arrow"></i>
-        </a>
+      <a href="cruisingFamilies.html" class="work-row reveal project-more" id="project-cruisingFamilies"
+        style="display: none;">
+        <span class="num">11</span>
+        <h3><i class="fa fa-ship"></i>Cruising Families (Flutter)</h3>
+        <span class="desc">Social community platform connecting families traveling on cruise ships with offline
+          messaging and itineraries.</span>
+        <span class="tags"><span>Flutter</span><span>Community</span></span>
+        <i class="fa fa-arrow-right arrow"></i>
+      </a>
 
-        <a href="archeia.html" class="work-row reveal" id="project-archeia">
-          <span class="num">12</span>
-          <h3><i class="fa fa-trophy"></i>Archeia (Flutter)</h3>
-          <span class="desc">Fitness and gym management app for logging workouts, tracking exercise routines, and
-            monitoring progress.</span>
-          <span class="tags"><span>Flutter</span><span>Fitness</span><span>Gym</span></span>
-          <i class="fa fa-arrow-right arrow"></i>
-        </a>
+      <a href="archeia.html" class="work-row reveal project-more" id="project-archeia" style="display: none;">
+        <span class="num">12</span>
+        <h3><i class="fa fa-trophy"></i>Archeia (Flutter)</h3>
+        <span class="desc">Fitness and gym management app for logging workouts, tracking exercise routines, and
+          monitoring progress.</span>
+        <span class="tags"><span>Flutter</span><span>Fitness</span></span>
+        <i class="fa fa-arrow-right arrow"></i>
+      </a>
 
-        <a href="qrCodeGenerator.html" class="work-row reveal" id="project-qrCodeGenerator">
-          <span class="num">13</span>
-          <h3><i class="fa fa-qrcode"></i>QR Code Generator (Flutter-Web)</h3>
-          <span class="desc">Web utility for generating, styling, and exporting customized QR codes instantly.</span>
-          <span class="tags"><span>Flutter Web</span><span>Utility</span><span>Tool</span></span>
-          <i class="fa fa-arrow-right arrow"></i>
-        </a>
+      <a href="qrCodeGenerator.html" class="work-row reveal project-more" id="project-qrCodeGenerator"
+        style="display: none;">
+        <span class="num">13</span>
+        <h3><i class="fa fa-qrcode"></i>QR Code Generator (Flutter-Web)</h3>
+        <span class="desc">Web utility for generating, styling, and exporting customized QR codes instantly.</span>
+        <span class="tags"><span>Flutter Web</span><span>Utility</span></span>
+        <i class="fa fa-arrow-right arrow"></i>
+      </a>
 
-        <a href="stepsChallenge.html" class="work-row reveal" id="project-stepsChallenge">
-          <span class="num">14</span>
-          <h3><i class="fa fa-heartbeat"></i>Steps Challenge (Flutter)</h3>
-          <span class="desc">Activity tracking and gamified step-counting application with leaderboards and fitness
-            goals.</span>
-          <span class="tags"><span>Flutter</span><span>Fitness</span><span>Gamification</span></span>
-          <i class="fa fa-arrow-right arrow"></i>
-        </a>
+      <a href="stepsChallenge.html" class="work-row reveal project-more" id="project-stepsChallenge"
+        style="display: none;">
+        <span class="num">14</span>
+        <h3><i class="fa fa-heartbeat"></i>Steps Challenge (Flutter)</h3>
+        <span class="desc">Activity tracking and gamified step-counting application with leaderboards and fitness
+          goals.</span>
+        <span class="tags"><span>Flutter</span><span>Gamification</span></span>
+        <i class="fa fa-arrow-right arrow"></i>
+      </a>
 
-        <a href="absher.html" class="work-row reveal" id="project-absher">
-          <span class="num">15</span>
-          <h3><i class="fa fa-users"></i>Absher (Flutter)</h3>
-          <span class="desc">Employee portal for viewing personal data and assets, submitting requests, and managing
-            team
-            approvals.</span>
-          <span class="tags"><span>Flutter</span><span>HR Portal</span><span>Enterprise</span></span>
-          <i class="fa fa-arrow-right arrow"></i>
-        </a>
+      <a href="absher.html" class="work-row reveal project-more" id="project-absher" style="display: none;">
+        <span class="num">15</span>
+        <h3><i class="fa fa-users"></i>Absher (Flutter)</h3>
+        <span class="desc">Employee portal for viewing personal data and assets, submitting requests, and managing team
+          approvals.</span>
+        <span class="tags"><span>Flutter</span><span>HR Portal</span></span>
+        <i class="fa fa-arrow-right arrow"></i>
+      </a>
 
-        <a href="lola.html" class="work-row reveal" id="project-lola">
-          <span class="num">16</span>
-          <h3><i class="fa fa-book"></i>Lola (Native android/iOS)</h3>
-          <span class="desc">Native wellness journaling app focused on daily reflection, mood tracking, and personal
-            growth.</span>
-          <span class="tags"><span>Android</span><span>iOS</span><span>Wellness</span></span>
-          <i class="fa fa-arrow-right arrow"></i>
-        </a>
+      <a href="lola.html" class="work-row reveal project-more" id="project-lola" style="display: none;">
+        <span class="num">16</span>
+        <h3><i class="fa fa-book"></i>Lola (Native android/iOS)</h3>
+        <span class="desc">Native wellness journaling app focused on daily reflection, mood tracking, and personal
+          growth.</span>
+        <span class="tags"><span>Android</span><span>iOS</span><span>Wellness</span></span>
+        <i class="fa fa-arrow-right arrow"></i>
+      </a>
 
-        <a href="businessCard.html" id="project-businessCardApp" class="work-row reveal">
-          <span class="num">17</span>
-          <h3><i class="fa fa-id-card-o"></i>Business Card (Flutter)</h3>
-          <span class="desc">Digital contact card and networking app for instant vCard and social link sharing via QR
-            code.</span>
-          <span class="tags"><span>Flutter</span><span>Networking</span><span>vCard</span></span>
-          <i class="fa fa-arrow-right arrow"></i>
-        </a>
+      <a href="businessCard.html" class="work-row reveal project-more" id="project-businessCardApp"
+        style="display: none;">
+        <span class="num">17</span>
+        <h3><i class="fa fa-id-card-o"></i>Business Card (Flutter)</h3>
+        <span class="desc">Digital contact card and networking app for instant vCard and social link sharing via QR
+          code.</span>
+        <span class="tags"><span>Flutter</span><span>Networking</span></span>
+        <i class="fa fa-arrow-right arrow"></i>
+      </a>
 
+    </div>
 
-      </div>
-    </section>
+    <!-- Toggle Action Button -->
+    <div style="text-align: center; margin-top: 36px;">
+      <button id="toggle-projects-btn" class="btn ghost" style="cursor: pointer; padding: 14px 28px; font-size: 14px;">
+        View All Projects (+11 more) <i class="fa fa-chevron-down" style="margin-left: 6px;"></i>
+      </button>
+    </div>
+  </section>
 
-    <section class="stack-sec" id="stack">
-      <div class="sec-label"><span class="num mono">§ 02</span>
-        <div class="line"></div>
-      </div>
-      <h2 class="sec-title display">How I build</h2>
-      <div class="stack-grid">
-        <div class="stack-card reveal">
-          <i class="fa fa-mobile"></i>
-          <h4>Native mobile development</h4>
-          <p>Android in Kotlin &amp; Java, iOS in Swift — built and shipped end to end, not just prototyped.</p>
-        </div>
-        <div class="stack-card reveal">
-          <i class="fa fa-code-fork"></i>
-          <h4>Cross-platform architecture</h4>
-          <p>Flutter builds structured around MVVM and MVC, so codebases stay maintainable as they grow.</p>
-        </div>
-        <div class="stack-card reveal">
-          <i class="fa fa-plug"></i>
-          <h4>Connected experiences</h4>
-          <p>REST APIs, Firebase, Google Maps SDK, and push notification systems, wired in cleanly.</p>
-        </div>
-      </div>
-    </section>
+  <!-- Script to toggle remaining projects -->
+  <script>
+    document.getElementById('toggle-projects-btn').addEventListener('click', function () {
+      const hiddenProjects = document.querySelectorAll('.project-more');
+      const isExpanded = this.getAttribute('data-expanded') === 'true';
 
-    <section class="cta-sec" id="contact">
-      <div class="cta-card reveal">
-        <h2 class="display">Let's build your next app.</h2>
-        <p>Open to new mobile projects, remote or on-site.</p>
-        <a href="mailto:saadkhurshid838@gmail.com" class="cta-email"><i class="fa fa-envelope"></i>
-          saadkhurshid838@gmail.com</a>
-        <div class="cta-social">
-          <a href="https://www.linkedin.com/in/saad-khurshid-6529ab131/" target="_blank" aria-label="LinkedIn"><i
-              class="fa fa-linkedin"></i></a>
-          <a href="https://www.facebook.com/sunnymalik236/" target="_blank" aria-label="Facebook"><i
-              class="fa fa-facebook"></i></a>
-        </div>
-      </div>
-    </section>
-
-    <footer class="site-foot">
-      <span>&copy; 2026 Saad Khurshid</span>
-      <span>Mobile Application Developer</span>
-    </footer>
-
-    <script>
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
-      }, { threshold: 0.12 });
-      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-      const stack = document.getElementById('deviceStack');
-      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (stack && !reduceMotion && window.matchMedia('(min-width:900px)').matches) {
-        stack.addEventListener('mousemove', (e) => {
-          const r = stack.getBoundingClientRect();
-          const px = (e.clientX - r.left) / r.width - 0.5;
-          const py = (e.clientY - r.top) / r.height - 0.5;
-          stack.querySelectorAll('.device').forEach((d, i) => {
-            const depth = (i + 1) * 6;
-            d.style.transform = d.style.transform.replace(/translate3d\([^)]*\)/, '') +
-              ` translate3d(${px * depth}px, ${py * depth}px, 0)`;
-          });
+      if (!isExpanded) {
+        hiddenProjects.forEach(p => {
+          p.style.display = 'grid';
+          p.classList.add('in-view');
         });
-        stack.addEventListener('mouseleave', () => {
-          stack.querySelectorAll('.device').forEach(d => {
-            d.style.transform = d.style.transform.replace(/translate3d\([^)]*\)/, '');
-          });
+        this.innerHTML = 'Show Less <i class="fa fa-chevron-up" style="margin-left: 6px;"></i>';
+        this.setAttribute('data-expanded', 'true');
+      } else {
+        hiddenProjects.forEach(p => {
+          p.style.display = 'none';
         });
+        this.innerHTML = 'View All Projects (+11 more) <i class="fa fa-chevron-down" style="margin-left: 6px;"></i>';
+        this.setAttribute('data-expanded', 'false');
+
+        // Smooth scroll back up to the work section head
+        document.getElementById('work').scrollIntoView({ behavior: 'smooth' });
       }
+    });
+  </script>
 
-      $(document).ready(function () {
-        // 1. Save the clicked project ID to sessionStorage before leaving index.html
-        $('.work-row').on('click', function () {
-          var projectId = $(this).attr('id');
-          if (projectId) {
-            sessionStorage.setItem('lastClickedProject', projectId);
-          }
-        });
+  <!-- Contact CTA Section -->
+  <section class="cta-sec" id="contact">
+    <div class="cta-card">
+      <h2>Let's build something remarkable.</h2>
+      <p>Have an upcoming project or looking for a Senior Mobile Engineer to join your team?</p>
+      <a href="mailto:saadkhurshid838@gmail.com" class="cta-email">saadkhurshid838@gmail.com</a>
+      <div class="cta-social">
+        <a href="https://www.linkedin.com/in/saad-khurshid-6529ab131/" target="_blank" title="LinkedIn"><i
+            class="fa fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/sunnymalik236/" target="_blank" title="Facebook"><i
+            class="fa fa-facebook"></i></a>
+      </div>
+    </div>
+  </section>
 
-        // 2. On page load, check if there's a stored project ID to scroll back to
-        var lastClickedId = sessionStorage.getItem('lastClickedProject');
+  <!-- Footer -->
+  <footer class="site-foot">
+    <span>&copy; Saad Khurshid. All rights reserved.</span>
+    <span>Mobile Application Developer &amp; Architect</span>
+  </footer>
 
-        if (lastClickedId) {
-          var $targetElement = $('#' + lastClickedId);
-
-          if ($targetElement.length) {
-            // Smooth scroll to the last clicked project
-            $('html, body').animate({
-              scrollTop: $targetElement.offset().top - 100 // Adjust '- 100' for your fixed header height
-            }, 400);
-          }
-
-          // Clear it so it won't scroll automatically if the user manually reloads/navigates back later
-          sessionStorage.removeItem('lastClickedProject');
+  <!-- Scroll Reveal Script -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
         }
       });
-    </script>
+    }, { threshold: 0.1 });
 
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  </script>
 
 </body>
 
